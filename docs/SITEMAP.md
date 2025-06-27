@@ -18,7 +18,7 @@
 
 ## 🗺️ Complete Site Structure
 
-```
+```text
 docs/
 ├── 📖 README.md                           # Main documentation hub
 ├── 📋 INDEX.md                            # Complete documentation index
