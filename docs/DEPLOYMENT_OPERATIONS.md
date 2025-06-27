@@ -47,22 +47,22 @@ The Agentic RAG MCP Server supports multiple deployment strategies optimized for
 ```mermaid
 graph TD
     A[Deployment Requirements] --> B{Scale & Budget}
-    
+
     B --> C[Development/Demo<br/>$0-30/month]
     B --> D[Production<br/>$50-200/month]
-    
+
     C --> E[Container Platforms]
     C --> F[Managed Services]
-    
+
     D --> G[Kubernetes]
     D --> H[Cloud Native]
-    
+
     E --> I[Railway/Fly.io]
     F --> J[Heroku/DigitalOcean]
-    
+
     G --> K[AWS EKS]
     G --> L[GCP GKE]
-    
+
     H --> M[Serverless]
     H --> N[Microservices]
 ```
@@ -75,41 +75,41 @@ graph TD
 
 1. **Clone and Configure**
 
-```bash
-git clone <repository-url>
-cd qdrant-neo4j-crawl4ai-mcp
-cp .env.example .env
-# Edit .env with your configuration
-```
+   ```bash
+   git clone <repository-url>
+   cd qdrant-neo4j-crawl4ai-mcp
+   cp .env.example .env
+   # Edit .env with your configuration
+   ```
 
 2. **Start Services**
 
-```bash
-# Start all services
-docker-compose up -d
+   ```bash
+   # Start all services
+   docker-compose up -d
 
-# Start specific services
-docker-compose up -d qdrant neo4j redis
+   # Start specific services
+   docker-compose up -d qdrant neo4j redis
 
-# View logs
-docker-compose logs -f mcp-server
-```
+   # View logs
+   docker-compose logs -f mcp-server
+   ```
 
 3. **Verify Deployment**
 
-```bash
-# Health check
-curl http://localhost:8000/health
+   ```bash
+   # Health check
+   curl http://localhost:8000/health
 
-# Interactive documentation
-open http://localhost:8000/docs
-```
+   # Interactive documentation
+   open http://localhost:8000/docs
+   ```
 
 ### Development Docker Compose
 
 ```yaml
 # docker-compose.yml
-version: '3.8'
+version: "3.8"
 
 services:
   mcp-server:
@@ -261,7 +261,7 @@ CMD ["python", "-m", "qdrant_neo4j_crawl4ai_mcp.main"]
 
 ```yaml
 # docker-compose.prod.yml
-version: '3.8'
+version: "3.8"
 
 services:
   mcp-server:
@@ -284,10 +284,10 @@ services:
       resources:
         limits:
           memory: 1G
-          cpus: '0.5'
+          cpus: "0.5"
         reservations:
           memory: 512M
-          cpus: '0.25'
+          cpus: "0.25"
       restart_policy:
         condition: on-failure
         delay: 5s
@@ -311,7 +311,7 @@ services:
       resources:
         limits:
           memory: 2G
-          cpus: '1.0'
+          cpus: "1.0"
     networks:
       - app_network
 
@@ -332,7 +332,7 @@ services:
       resources:
         limits:
           memory: 4G
-          cpus: '2.0'
+          cpus: "2.0"
     networks:
       - app_network
 
@@ -345,7 +345,7 @@ services:
       resources:
         limits:
           memory: 512M
-          cpus: '0.25'
+          cpus: "0.25"
     networks:
       - app_network
 
@@ -474,54 +474,54 @@ spec:
         version: v1.0.0
     spec:
       containers:
-      - name: mcp-server
-        image: your-registry.com/mcp-server:v1.0.0
-        ports:
-        - containerPort: 8000
-          name: http
-        envFrom:
-        - configMapRef:
-            name: mcp-server-config
-        - secretRef:
-            name: mcp-server-secrets
-        resources:
-          requests:
-            memory: "512Mi"
-            cpu: "250m"
-          limits:
-            memory: "1Gi"
-            cpu: "500m"
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8000
-          initialDelaySeconds: 30
-          periodSeconds: 10
-          timeoutSeconds: 5
-          failureThreshold: 3
-        readinessProbe:
-          httpGet:
-            path: /ready
-            port: 8000
-          initialDelaySeconds: 10
-          periodSeconds: 5
-          timeoutSeconds: 3
-          failureThreshold: 3
-        securityContext:
-          runAsNonRoot: true
-          runAsUser: 1000
-          allowPrivilegeEscalation: false
-          readOnlyRootFilesystem: true
-        volumeMounts:
-        - name: tmp
-          mountPath: /tmp
-        - name: logs
-          mountPath: /app/logs
+        - name: mcp-server
+          image: your-registry.com/mcp-server:v1.0.0
+          ports:
+            - containerPort: 8000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: mcp-server-config
+            - secretRef:
+                name: mcp-server-secrets
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 3
+            failureThreshold: 3
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1000
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+            - name: logs
+              mountPath: /app/logs
       volumes:
-      - name: tmp
-        emptyDir: {}
-      - name: logs
-        emptyDir: {}
+        - name: tmp
+          emptyDir: {}
+        - name: logs
+          emptyDir: {}
 
 ---
 apiVersion: v1
@@ -535,10 +535,10 @@ spec:
   selector:
     app: mcp-server
   ports:
-  - name: http
-    port: 80
-    targetPort: 8000
-    protocol: TCP
+    - name: http
+      port: 80
+      targetPort: 8000
+      protocol: TCP
   type: ClusterIP
 
 ---
@@ -555,18 +555,18 @@ spec:
   minReplicas: 2
   maxReplicas: 10
   metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        type: Utilization
-        averageUtilization: 70
-  - type: Resource
-    resource:
-      name: memory
-      target:
-        type: Utilization
-        averageUtilization: 80
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70
+    - type: Resource
+      resource:
+        name: memory
+        target:
+          type: Utilization
+          averageUtilization: 80
 ```
 
 ### Qdrant Deployment
@@ -590,50 +590,50 @@ spec:
         app: qdrant
     spec:
       containers:
-      - name: qdrant
-        image: qdrant/qdrant:v1.7.4
-        ports:
-        - containerPort: 6333
-          name: http
-        - containerPort: 6334
-          name: grpc
-        env:
-        - name: QDRANT__SERVICE__HTTP_PORT
-          value: "6333"
-        - name: QDRANT__SERVICE__GRPC_PORT
-          value: "6334"
-        - name: QDRANT__CLUSTER__ENABLED
-          value: "true"
+        - name: qdrant
+          image: qdrant/qdrant:v1.7.4
+          ports:
+            - containerPort: 6333
+              name: http
+            - containerPort: 6334
+              name: grpc
+          env:
+            - name: QDRANT__SERVICE__HTTP_PORT
+              value: "6333"
+            - name: QDRANT__SERVICE__GRPC_PORT
+              value: "6334"
+            - name: QDRANT__CLUSTER__ENABLED
+              value: "true"
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "500m"
+            limits:
+              memory: "4Gi"
+              cpu: "2000m"
+          volumeMounts:
+            - name: qdrant-storage
+              mountPath: /qdrant/storage
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 6333
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /readyz
+              port: 6333
+            initialDelaySeconds: 10
+            periodSeconds: 5
+  volumeClaimTemplates:
+    - metadata:
+        name: qdrant-storage
+      spec:
+        accessModes: ["ReadWriteOnce"]
         resources:
           requests:
-            memory: "1Gi"
-            cpu: "500m"
-          limits:
-            memory: "4Gi"
-            cpu: "2000m"
-        volumeMounts:
-        - name: qdrant-storage
-          mountPath: /qdrant/storage
-        livenessProbe:
-          httpGet:
-            path: /healthz
-            port: 6333
-          initialDelaySeconds: 30
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /readyz
-            port: 6333
-          initialDelaySeconds: 10
-          periodSeconds: 5
-  volumeClaimTemplates:
-  - metadata:
-      name: qdrant-storage
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 20Gi
+            storage: 20Gi
 
 ---
 apiVersion: v1
@@ -645,12 +645,12 @@ spec:
   selector:
     app: qdrant
   ports:
-  - name: http
-    port: 6333
-    targetPort: 6333
-  - name: grpc
-    port: 6334
-    targetPort: 6334
+    - name: http
+      port: 6333
+      targetPort: 6333
+    - name: grpc
+      port: 6334
+      targetPort: 6334
   clusterIP: None
 ```
 
@@ -672,20 +672,20 @@ metadata:
     nginx.ingress.kubernetes.io/rate-limit-window: "1m"
 spec:
   tls:
-  - hosts:
-    - api.yourdomain.com
-    secretName: mcp-server-tls
+    - hosts:
+        - api.yourdomain.com
+      secretName: mcp-server-tls
   rules:
-  - host: api.yourdomain.com
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: mcp-server-service
-            port:
-              number: 80
+    - host: api.yourdomain.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: mcp-server-service
+                port:
+                  number: 80
 ```
 
 ### Deployment Commands
@@ -862,9 +862,9 @@ fly scale memory 2048
         }
       ],
       "environment": [
-        {"name": "ENVIRONMENT", "value": "production"},
-        {"name": "LOG_LEVEL", "value": "INFO"},
-        {"name": "PORT", "value": "8000"}
+        { "name": "ENVIRONMENT", "value": "production" },
+        { "name": "LOG_LEVEL", "value": "INFO" },
+        { "name": "PORT", "value": "8000" }
       ],
       "secrets": [
         {
@@ -881,7 +881,10 @@ fly scale memory 2048
         }
       },
       "healthCheck": {
-        "command": ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"],
+        "command": [
+          "CMD-SHELL",
+          "curl -f http://localhost:8000/health || exit 1"
+        ],
         "interval": 30,
         "timeout": 5,
         "retries": 3,
@@ -915,21 +918,21 @@ from constructs import Construct
 class MCPStack(Stack):
     def __init__(self, scope: Construct, construct_id: str, **kwargs) -> None:
         super().__init__(scope, construct_id, **kwargs)
-        
+
         # VPC for isolated networking
         vpc = ec2.Vpc(
             self, "MCPVpc",
             max_azs=2,
             nat_gateways=1
         )
-        
+
         # ECS Cluster
         cluster = ecs.Cluster(
             self, "MCPCluster",
             vpc=vpc,
             container_insights=True
         )
-        
+
         # Secrets for sensitive data
         secrets_manager = secrets.Secret(
             self, "MCPSecrets",
@@ -941,7 +944,7 @@ class MCPStack(Stack):
                 exclude_characters='"@/\\'
             )
         )
-        
+
         # Fargate service with ALB
         fargate_service = ecs_patterns.ApplicationLoadBalancedFargateService(
             self, "MCPService",
@@ -970,7 +973,7 @@ class MCPStack(Stack):
             domain_name="api.yourdomain.com",
             domain_zone=None  # Use existing hosted zone
         )
-        
+
         # Health check configuration
         fargate_service.target_group.configure_health_check(
             path="/health",
@@ -979,18 +982,18 @@ class MCPStack(Stack):
             timeout=Duration.seconds(10),
             interval=Duration.seconds(30)
         )
-        
+
         # Auto-scaling
         scaling = fargate_service.service.auto_scale_task_count(
             min_capacity=2,
             max_capacity=10
         )
-        
+
         scaling.scale_on_cpu_utilization(
             "CpuScaling",
             target_utilization_percent=70
         )
-        
+
         scaling.scale_on_memory_utilization(
             "MemoryScaling",
             target_utilization_percent=80
@@ -999,7 +1002,7 @@ class MCPStack(Stack):
 # Deploy stack
 if __name__ == "__main__":
     import aws_cdk as cdk
-    
+
     app = cdk.App()
     MCPStack(app, "MCPStack", env=cdk.Environment(
         account="123456789012",
@@ -1028,17 +1031,17 @@ provider "aws" {
 # VPC and Networking
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
-  
+
   name = "mcp-vpc"
   cidr = "10.0.0.0/16"
-  
+
   azs             = ["${var.aws_region}a", "${var.aws_region}b"]
   private_subnets = ["10.0.1.0/24", "10.0.2.0/24"]
   public_subnets  = ["10.0.101.0/24", "10.0.102.0/24"]
-  
+
   enable_nat_gateway = true
   enable_vpn_gateway = true
-  
+
   tags = {
     Environment = var.environment
     Project     = "mcp-server"
@@ -1048,12 +1051,12 @@ module "vpc" {
 # ECS Cluster
 resource "aws_ecs_cluster" "mcp_cluster" {
   name = "mcp-cluster"
-  
+
   setting {
     name  = "containerInsights"
     value = "enabled"
   }
-  
+
   tags = {
     Environment = var.environment
     Project     = "mcp-server"
@@ -1067,9 +1070,9 @@ resource "aws_lb" "mcp_alb" {
   load_balancer_type = "application"
   security_groups    = [aws_security_group.alb.id]
   subnets            = module.vpc.public_subnets
-  
+
   enable_deletion_protection = false
-  
+
   tags = {
     Environment = var.environment
     Project     = "mcp-server"
@@ -1085,19 +1088,19 @@ resource "aws_ecs_task_definition" "mcp_task" {
   memory                   = "1024"
   execution_role_arn       = aws_iam_role.ecs_execution_role.arn
   task_role_arn           = aws_iam_role.ecs_task_role.arn
-  
+
   container_definitions = jsonencode([
     {
       name  = "mcp-server"
       image = "${var.ecr_repository_url}:latest"
-      
+
       portMappings = [
         {
           containerPort = 8000
           protocol      = "tcp"
         }
       ]
-      
+
       environment = [
         {
           name  = "ENVIRONMENT"
@@ -1112,14 +1115,14 @@ resource "aws_ecs_task_definition" "mcp_task" {
           value = "8000"
         }
       ]
-      
+
       secrets = [
         {
           name      = "JWT_SECRET_KEY"
           valueFrom = aws_secretsmanager_secret.mcp_secrets.arn
         }
       ]
-      
+
       logConfiguration = {
         logDriver = "awslogs"
         options = {
@@ -1128,7 +1131,7 @@ resource "aws_ecs_task_definition" "mcp_task" {
           awslogs-stream-prefix = "ecs"
         }
       }
-      
+
       healthCheck = {
         command     = ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
         interval    = 30
@@ -1138,7 +1141,7 @@ resource "aws_ecs_task_definition" "mcp_task" {
       }
     }
   ])
-  
+
   tags = {
     Environment = var.environment
     Project     = "mcp-server"
@@ -1152,24 +1155,24 @@ resource "aws_ecs_service" "mcp_service" {
   task_definition = aws_ecs_task_definition.mcp_task.arn
   desired_count   = 2
   launch_type     = "FARGATE"
-  
+
   network_configuration {
     security_groups  = [aws_security_group.ecs_tasks.id]
     subnets          = module.vpc.private_subnets
     assign_public_ip = false
   }
-  
+
   load_balancer {
     target_group_arn = aws_lb_target_group.mcp_tg.arn
     container_name   = "mcp-server"
     container_port   = 8000
   }
-  
+
   depends_on = [
     aws_lb_listener.mcp_listener,
     aws_iam_role_policy_attachment.ecs_execution_role_policy
   ]
-  
+
   tags = {
     Environment = var.environment
     Project     = "mcp-server"
@@ -1191,7 +1194,7 @@ resource "aws_appautoscaling_policy" "mcp_up" {
   resource_id        = aws_appautoscaling_target.mcp_target.resource_id
   scalable_dimension = aws_appautoscaling_target.mcp_target.scalable_dimension
   service_namespace  = aws_appautoscaling_target.mcp_target.service_namespace
-  
+
   target_tracking_scaling_policy_configuration {
     predefined_metric_specification {
       predefined_metric_type = "ECSServiceAverageCPUUtilization"
@@ -1238,28 +1241,28 @@ alerting:
   alertmanagers:
     - static_configs:
         - targets:
-          - alertmanager:9093
+            - alertmanager:9093
 
 scrape_configs:
-  - job_name: 'mcp-server'
+  - job_name: "mcp-server"
     static_configs:
-      - targets: ['mcp-server:8000']
-    metrics_path: '/metrics'
+      - targets: ["mcp-server:8000"]
+    metrics_path: "/metrics"
     scrape_interval: 10s
-    
-  - job_name: 'qdrant'
+
+  - job_name: "qdrant"
     static_configs:
-      - targets: ['qdrant:6333']
-    metrics_path: '/metrics'
-    
-  - job_name: 'neo4j'
+      - targets: ["qdrant:6333"]
+    metrics_path: "/metrics"
+
+  - job_name: "neo4j"
     static_configs:
-      - targets: ['neo4j:2004']
-    metrics_path: '/metrics'
-    
-  - job_name: 'node-exporter'
+      - targets: ["neo4j:2004"]
+    metrics_path: "/metrics"
+
+  - job_name: "node-exporter"
     static_configs:
-      - targets: ['node-exporter:9100']
+      - targets: ["node-exporter:9100"]
 ```
 
 ### Alert Rules
@@ -1267,43 +1270,43 @@ scrape_configs:
 ```yaml
 # monitoring/prometheus/alert_rules.yml
 groups:
-- name: mcp-server-alerts
-  rules:
-  - alert: HighErrorRate
-    expr: rate(http_requests_total{code=~"5.."}[5m]) > 0.1
-    for: 2m
-    labels:
-      severity: critical
-    annotations:
-      summary: "High error rate detected"
-      description: "Error rate is {{ $value }} errors per second"
-      
-  - alert: HighResponseTime
-    expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 2
-    for: 5m
-    labels:
-      severity: warning
-    annotations:
-      summary: "High response time"
-      description: "95th percentile response time is {{ $value }}s"
-      
-  - alert: DatabaseConnectionFailure
-    expr: up{job="qdrant"} == 0 or up{job="neo4j"} == 0
-    for: 1m
-    labels:
-      severity: critical
-    annotations:
-      summary: "Database connection failure"
-      description: "{{ $labels.job }} is down"
-      
-  - alert: HighMemoryUsage
-    expr: (container_memory_usage_bytes / container_spec_memory_limit_bytes) > 0.9
-    for: 5m
-    labels:
-      severity: warning
-    annotations:
-      summary: "High memory usage"
-      description: "Memory usage is {{ $value | humanizePercentage }}"
+  - name: mcp-server-alerts
+    rules:
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{code=~"5.."}[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate detected"
+          description: "Error rate is {{ $value }} errors per second"
+
+      - alert: HighResponseTime
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High response time"
+          description: "95th percentile response time is {{ $value }}s"
+
+      - alert: DatabaseConnectionFailure
+        expr: up{job="qdrant"} == 0 or up{job="neo4j"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Database connection failure"
+          description: "{{ $labels.job }} is down"
+
+      - alert: HighMemoryUsage
+        expr: (container_memory_usage_bytes / container_spec_memory_limit_bytes) > 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High memory usage"
+          description: "Memory usage is {{ $value | humanizePercentage }}"
 ```
 
 ### Grafana Dashboard
@@ -1483,39 +1486,39 @@ metadata:
   name: database-backup
   namespace: qdrant-neo4j-crawl4ai-mcp
 spec:
-  schedule: "0 2 * * *"  # Daily at 2 AM
+  schedule: "0 2 * * *" # Daily at 2 AM
   jobTemplate:
     spec:
       template:
         spec:
           containers:
-          - name: backup
-            image: your-registry.com/backup-tool:latest
-            command:
-            - /bin/bash
-            - -c
-            - |
-              # Backup script here
-              kubectl exec sts/qdrant -- tar -czf /tmp/backup.tar.gz /qdrant/storage
-              kubectl cp qdrant-0:/tmp/backup.tar.gz /backups/qdrant-$(date +%Y%m%d).tar.gz
-              aws s3 cp /backups/ s3://backup-bucket/ --recursive
-            env:
-            - name: AWS_ACCESS_KEY_ID
-              valueFrom:
-                secretKeyRef:
-                  name: backup-secrets
-                  key: aws-access-key
-            - name: AWS_SECRET_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: backup-secrets
-                  key: aws-secret-key
-            volumeMounts:
-            - name: backup-storage
-              mountPath: /backups
+            - name: backup
+              image: your-registry.com/backup-tool:latest
+              command:
+                - /bin/bash
+                - -c
+                - |
+                  # Backup script here
+                  kubectl exec sts/qdrant -- tar -czf /tmp/backup.tar.gz /qdrant/storage
+                  kubectl cp qdrant-0:/tmp/backup.tar.gz /backups/qdrant-$(date +%Y%m%d).tar.gz
+                  aws s3 cp /backups/ s3://backup-bucket/ --recursive
+              env:
+                - name: AWS_ACCESS_KEY_ID
+                  valueFrom:
+                    secretKeyRef:
+                      name: backup-secrets
+                      key: aws-access-key
+                - name: AWS_SECRET_ACCESS_KEY
+                  valueFrom:
+                    secretKeyRef:
+                      name: backup-secrets
+                      key: aws-secret-key
+              volumeMounts:
+                - name: backup-storage
+                  mountPath: /backups
           volumes:
-          - name: backup-storage
-            emptyDir: {}
+            - name: backup-storage
+              emptyDir: {}
           restartPolicy: OnFailure
 ```
 
@@ -1548,7 +1551,7 @@ case "$SERVICE" in
         "
         docker restart qdrant-container
         ;;
-        
+
     "neo4j")
         echo "Restoring Neo4j from $BACKUP_FILE..."
         docker stop neo4j-container
@@ -1560,14 +1563,14 @@ case "$SERVICE" in
         "
         docker start neo4j-container
         ;;
-        
+
     "redis")
         echo "Restoring Redis from $BACKUP_FILE..."
         docker stop redis-container
         docker cp "$BACKUP_FILE" redis-container:/data/dump.rdb
         docker start redis-container
         ;;
-        
+
     *)
         echo "Unknown service: $SERVICE"
         exit 1
@@ -1593,37 +1596,37 @@ on:
   pull_request:
     branches: [main]
   schedule:
-    - cron: '0 0 * * *'  # Daily scan
+    - cron: "0 0 * * *" # Daily scan
 
 jobs:
   security-scan:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    
-    - name: Run Trivy vulnerability scanner
-      uses: aquasecurity/trivy-action@master
-      with:
-        image-ref: 'your-registry.com/mcp-server:latest'
-        format: 'sarif'
-        output: 'trivy-results.sarif'
-    
-    - name: Upload Trivy scan results
-      uses: github/codeql-action/upload-sarif@v2
-      with:
-        sarif_file: 'trivy-results.sarif'
-    
-    - name: Run Snyk security scan
-      uses: snyk/actions/python@master
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      with:
-        args: --severity-threshold=high
-    
-    - name: Run OWASP ZAP baseline scan
-      uses: zaproxy/action-baseline@v0.7.0
-      with:
-        target: 'http://localhost:8000'
+      - uses: actions/checkout@v4
+
+      - name: Run Trivy vulnerability scanner
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: "your-registry.com/mcp-server:latest"
+          format: "sarif"
+          output: "trivy-results.sarif"
+
+      - name: Upload Trivy scan results
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: "trivy-results.sarif"
+
+      - name: Run Snyk security scan
+        uses: snyk/actions/python@master
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        with:
+          args: --severity-threshold=high
+
+      - name: Run OWASP ZAP baseline scan
+        uses: zaproxy/action-baseline@v0.7.0
+        with:
+          target: "http://localhost:8000"
 ```
 
 ### Certificate Management
@@ -1641,9 +1644,9 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-prod
     solvers:
-    - http01:
-        ingress:
-          class: nginx
+      - http01:
+          ingress:
+            class: nginx
 
 ---
 apiVersion: cert-manager.io/v1
@@ -1658,7 +1661,7 @@ spec:
     kind: ClusterIssuer
   commonName: api.yourdomain.com
   dnsNames:
-  - api.yourdomain.com
+    - api.yourdomain.com
 ```
 
 ### Network Policies
@@ -1675,39 +1678,39 @@ spec:
     matchLabels:
       app: mcp-server
   policyTypes:
-  - Ingress
-  - Egress
+    - Ingress
+    - Egress
   ingress:
-  - from:
-    - namespaceSelector:
-        matchLabels:
-          name: ingress-nginx
-    ports:
-    - protocol: TCP
-      port: 8000
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              name: ingress-nginx
+      ports:
+        - protocol: TCP
+          port: 8000
   egress:
-  - to:
-    - podSelector:
-        matchLabels:
-          app: qdrant
-    ports:
-    - protocol: TCP
-      port: 6333
-  - to:
-    - podSelector:
-        matchLabels:
-          app: neo4j
-    ports:
-    - protocol: TCP
-      port: 7687
-  - to: []
-    ports:
-    - protocol: TCP
-      port: 443  # HTTPS egress
-    - protocol: TCP
-      port: 53   # DNS
-    - protocol: UDP
-      port: 53   # DNS
+    - to:
+        - podSelector:
+            matchLabels:
+              app: qdrant
+      ports:
+        - protocol: TCP
+          port: 6333
+    - to:
+        - podSelector:
+            matchLabels:
+              app: neo4j
+      ports:
+        - protocol: TCP
+          port: 7687
+    - to: []
+      ports:
+        - protocol: TCP
+          port: 443 # HTTPS egress
+        - protocol: TCP
+          port: 53 # DNS
+        - protocol: UDP
+          port: 53 # DNS
 ```
 
 ---

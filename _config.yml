@@ -1,0 +1,132 @@
+# GitHub Pages Configuration for Qdrant Neo4j Crawl4AI MCP Server
+# Production-ready agentic RAG MCP server documentation
+
+# Site Settings
+title: "Qdrant Neo4j Crawl4AI MCP Server"
+description: "Production-ready agentic RAG MCP server combining vector search, knowledge graphs, and web intelligence"
+url: "https://bjornmelin.github.io"
+baseurl: "/qdrant-neo4j-crawl4ai-mcp"
+
+# Repository Information
+repository: "BjornMelin/qdrant-neo4j-crawl4ai-mcp"
+github_username: "BjornMelin"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-relative-links
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+# Plugin Settings
+relative_links:
+  enabled: true
+  collections: true
+
+titles_from_headings:
+  enabled: true
+  strip_title: true
+  collections: true
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path/
+
+# Include/Exclude
+include:
+  - docs/
+  - README.md
+  - DEPLOYMENT.md
+  - PORTFOLIO_SUMMARY.md
+
+exclude:
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - scripts/
+  - docker-compose.yml
+  - docker-compose.prod.yml
+  - Dockerfile
+  - .dockerignore
+  - .gitignore
+  - pyproject.toml
+  - uv.lock
+  - src/
+  - tests/
+  - k8s/
+  - monitoring/
+  - deployment/
+  - logs/
+
+# Navigation
+header_pages:
+  - docs/README.md
+  - docs/getting-started/README.md
+  - docs/API_REFERENCE.md
+  - docs/ARCHITECTURE.md
+  - docs/DEPLOYMENT_OPERATIONS.md
+  - docs/DEVELOPER_GUIDE.md
+
+# SEO and Social
+author:
+  name: "Bjorn Melin"
+  email: "bjorn@example.com"
+
+social:
+  name: "Qdrant Neo4j Crawl4AI MCP Server"
+  links:
+    - "https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp"
+
+# Analytics (replace with your tracking ID)
+google_analytics: # UA-XXXXXXXXX-X
+
+# Comments (optional - replace with your configuration)
+disqus:
+  shortname: # your-disqus-shortname
+
+# Footer
+footer_content: >
+  <p>Production-ready agentic RAG MCP server combining 
+  <a href="https://qdrant.tech/">Qdrant</a>, 
+  <a href="https://neo4j.com/">Neo4j</a>, and 
+  <a href="https://github.com/unclecode/crawl4ai">Crawl4AI</a> 
+  with <a href="https://github.com/jlowin/fastmcp">FastMCP 2.0</a>.</p>
+  
+  <p>Built with ☕ for production AI assistant integrations.</p>
+
+# Custom Variables
+version: "1.0.0"
+status: "Production Ready"
+last_updated: "June 27, 2025"
+
+# Mermaid Support
+mermaid:
+  enabled: true

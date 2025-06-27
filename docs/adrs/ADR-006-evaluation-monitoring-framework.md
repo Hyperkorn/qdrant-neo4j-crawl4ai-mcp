@@ -47,7 +47,7 @@ Our agentic RAG system requires comprehensive evaluation and monitoring to ensur
 
 ## Decision
 
-**Selected: Automated Evaluation with RAGAs + Custom Agent Metrics**
+### **Selected: Automated Evaluation with RAGAs + Custom Agent Metrics**
 
 ### Technical Justification
 
@@ -127,7 +127,7 @@ class AgentPerformanceMetrics:
 
 #### Multi-Tier Evaluation Strategy
 
-```
+```text
 Request → Agent Execution → [Real-time Metrics || Batch Evaluation || Human Review]
     ↓           ↓                     ↓              ↓               ↓
   Capture   Performance         Basic Metrics   Comprehensive    Quality Audit

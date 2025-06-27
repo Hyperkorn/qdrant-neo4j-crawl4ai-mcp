@@ -48,7 +48,7 @@ Based on current FastMCP 2.0 implementation:
 
 ## Decision
 
-**Selected: Enhanced FastMCP Security with Agent-Specific Protections**
+### **Selected: Enhanced FastMCP Security with Agent-Specific Protections**
 
 ### Technical Justification
 

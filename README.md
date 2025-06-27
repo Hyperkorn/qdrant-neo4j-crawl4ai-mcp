@@ -1,15 +1,21 @@
 # Qdrant Neo4j Crawl4AI MCP Server
 
-A production-ready Model Context Protocol (MCP) server combining Qdrant vector search, Neo4j knowledge graphs, and Crawl4AI web intelligence into a cohesive platform for AI assistant interactions.
+[![Production Ready](https://img.shields.io/badge/status-production--ready-brightgreen)](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp)
+[![FastMCP 2.0](https://img.shields.io/badge/FastMCP-2.0-blue)](https://github.com/jlowin/fastmcp)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue)](https://python.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## ✨ Features
+> **Production-ready agentic RAG MCP server combining Qdrant vector search, Neo4j knowledge graphs, and Crawl4AI web intelligence with autonomous orchestration capabilities**
+
+## 🎯 What is This?
+
+This is an **Agentic RAG (Retrieval-Augmented Generation) MCP Server** that provides intelligent, autonomous coordination of multiple AI services through a single Model Context Protocol interface. It combines:
 
 - **Vector Intelligence**: Semantic search and embedding storage via Qdrant
 - **Graph Intelligence**: Knowledge graphs and memory systems via Neo4j  
 - **Web Intelligence**: Smart web crawling and content extraction via Crawl4AI
-- **Unified API**: Single FastMCP 2.0 server with clean service abstractions
+- **Agentic Orchestration**: Autonomous query routing and result fusion
 - **Production-Ready**: Enterprise security, monitoring, and deployment patterns
-- **One-Day Development**: Optimized for rapid deployment and maintainability
 
 ## 🏗️ Architecture
 
@@ -166,43 +172,91 @@ docker run -p 8000:8000 qdrant-neo4j-crawl4ai-mcp
 - **Fly.io**: Global edge deployment
 - **AWS**: ECS/Lambda deployment with CDK
 
-See `/docs/deployment.md` for detailed deployment guides.
+## 📚 Complete Documentation
 
-## 🔒 Security
+### 🚀 Getting Started
+- **[📖 Documentation Hub](docs/README.md)** - Complete navigation guide  
+- **[⚡ Quick Start](docs/getting-started/quick-start.md)** - 5-minute setup  
+- **[🔧 Installation Guide](docs/getting-started/installation.md)** - Detailed setup  
+- **[⚙️ Configuration](docs/getting-started/configuration.md)** - Environment setup  
+- **[🎯 First Queries](docs/getting-started/first-queries.md)** - Learn the system  
 
-- **JWT Authentication**: Secure token-based authentication
-- **Rate Limiting**: Configurable request throttling
-- **OWASP Compliance**: Following API security best practices
-- **Input Validation**: Comprehensive request sanitization
-- **Audit Logging**: Security event tracking
+### 📖 User Guides
+- **[🔍 Vector Search Guide](docs/guides/semantic-search.md)** - Semantic similarity search  
+- **[🕸️ Knowledge Graph Guide](docs/guides/knowledge-graphs.md)** - Graph reasoning  
+- **[🌐 Web Intelligence Guide](docs/guides/web-intelligence.md)** - Real-time web data  
+- **[🤖 Agentic Workflows](docs/guides/agentic-workflows.md)** - Multi-modal intelligence  
 
-## 📊 Monitoring
+### 🔧 Technical Reference
+- **[📋 API Reference](docs/API_REFERENCE.md)** - Complete REST API docs  
+- **[🏗️ Architecture](docs/ARCHITECTURE.md)** - System design overview  
+- **[🔒 Security Guide](docs/guides/security-hardening.md)** - Enterprise security  
+- **[📊 Monitoring Setup](docs/guides/monitoring-observability.md)** - Production monitoring  
 
-- **Health Checks**: `/health` endpoint for service monitoring
-- **Structured Logging**: JSON logs for observability
-- **Metrics**: Performance and usage analytics
-- **Error Tracking**: Integration with Sentry
+### 🚢 Deployment & Operations
+- **[🚀 Deployment Operations](docs/DEPLOYMENT_OPERATIONS.md)** - Production deployment  
+- **[☸️ Kubernetes Guide](docs/deployment/kubernetes.md)** - Container orchestration  
+- **[🐳 Docker Guide](docs/deployment/docker.md)** - Containerized deployment  
+- **[☁️ Cloud Platforms](docs/deployment/cloud-platforms.md)** - Railway, Fly.io, etc.  
+
+### 💻 Development & Contributing
+- **[👨‍💻 Developer Guide](docs/DEVELOPER_GUIDE.md)** - Complete dev workflow  
+- **[🧪 Testing Framework](docs/development/testing.md)** - Unit & integration tests  
+- **[🎨 Contributing Guidelines](docs/development/contributing.md)** - How to contribute  
+- **[🔧 Local Development](docs/development/local-setup.md)** - Dev environment setup  
+
+### 📝 Examples & Tutorials
+- **[📚 Examples Hub](docs/examples/README.md)** - Code examples & tutorials  
+- **[🔰 Basic Usage](docs/examples/basic-usage/README.md)** - Simple queries  
+- **[🚀 Advanced Workflows](docs/examples/advanced-workflows/README.md)** - Complex patterns  
+- **[📱 Client SDKs](docs/examples/client-implementations/README.md)** - Multiple languages  
+
+For detailed deployment guides, see **[🚢 Deployment Operations](docs/DEPLOYMENT_OPERATIONS.md)**.
+
+## 🔒 Security & Compliance
+
+- **JWT Authentication**: Secure token-based authentication with refresh tokens
+- **Rate Limiting**: Redis-backed distributed request throttling
+- **OWASP Compliance**: Following API security best practices and security headers
+- **Input Validation**: Comprehensive Pydantic-based request sanitization
+- **Audit Logging**: Security event tracking with structured logging
+- **Enterprise Security**: [Complete security hardening guide](docs/guides/security-hardening.md)
+
+## 📊 Monitoring & Observability
+
+- **Health Checks**: Multi-layer `/health` endpoints with dependency validation
+- **Structured Logging**: JSON logs with correlation IDs and context
+- **Prometheus Metrics**: Custom business and infrastructure metrics
+- **Grafana Dashboards**: Pre-built dashboards for monitoring
+- **Error Tracking**: Sentry integration for error reporting
+- **Distributed Tracing**: Request flow visualization across services
+
+**Setup Guide**: [📊 Monitoring & Observability](docs/guides/monitoring-observability.md)
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
+We welcome contributions! Please see our [Contributing Guidelines](docs/development/contributing.md) for details.
 
-### Development Setup
+### Quick Start for Contributors
 
 ```bash
-# Install development dependencies
-uv sync --dev
+# 1. Fork and clone the repository
+git clone https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp.git
+cd qdrant-neo4j-crawl4ai-mcp
 
-# Install pre-commit hooks
+# 2. Set up development environment
+uv sync --dev
 uv run pre-commit install
 
-# Run tests before committing
+# 3. Run tests to verify setup
 uv run pytest
+
+# 4. Start development server
+docker-compose up -d
+uv run python -m qdrant_neo4j_crawl4ai_mcp
 ```
+
+**Detailed Setup**: [💻 Developer Guide](docs/DEVELOPER_GUIDE.md)
 
 ## 📄 License
 
