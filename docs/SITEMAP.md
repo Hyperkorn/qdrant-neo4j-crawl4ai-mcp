@@ -131,6 +131,7 @@ docs/
 **Goal**: Get the system running and understand basic usage
 
 **Recommended Path**:
+
 1. **[📖 Documentation Hub](README.md)** - Overview and navigation
 2. **[⚡ Quick Start](getting-started/quick-start.md)** - 5-minute Docker setup
 3. **[🎯 First Queries](getting-started/first-queries.md)** - Learn basic operations
@@ -143,6 +144,7 @@ docs/
 **Goal**: Understand capabilities and implement advanced patterns
 
 **Recommended Path**:
+
 1. **[🏗️ Architecture](ARCHITECTURE.md)** - Understand the system design
 2. **[🔧 Installation](getting-started/installation.md)** - Complete setup
 3. **[🚀 Advanced Workflows](examples/advanced-workflows/README.md)** - Complex patterns
@@ -155,6 +157,7 @@ docs/
 **Goal**: Deploy and operate in production environments
 
 **Recommended Path**:
+
 1. **[🚀 Deployment Operations](DEPLOYMENT_OPERATIONS.md)** - Production deployment
 2. **[☸️ Kubernetes Guide](deployment/kubernetes.md)** - Container orchestration
 3. **[📊 Monitoring Setup](guides/monitoring-observability.md)** - Production monitoring
@@ -167,6 +170,7 @@ docs/
 **Goal**: Integrate the system into applications
 
 **Recommended Path**:
+
 1. **[⚡ Quick Start](getting-started/quick-start.md)** - Get running quickly
 2. **[📋 API Reference](API_REFERENCE.md)** - Complete API documentation
 3. **[📱 Client SDKs](examples/client-implementations/README.md)** - Implementation examples
@@ -179,6 +183,7 @@ docs/
 **Goal**: Understand design decisions and system integration
 
 **Recommended Path**:
+
 1. **[🏗️ Architecture](ARCHITECTURE.md)** - Complete system design
 2. **[📜 ADRs](adrs/README.md)** - Architecture decision records
 3. **[📚 Technical Documentation](TECHNICAL_DOCUMENTATION.md)** - Implementation details
@@ -191,6 +196,7 @@ docs/
 **Goal**: Contribute to the project or maintain a fork
 
 **Recommended Path**:
+
 1. **[🔧 Developer Guide](DEVELOPER_GUIDE.md)** - Complete development workflow
 2. **[🏠 Local Setup](development/local-setup.md)** - Development environment
 3. **[🎨 Contributing](development/contributing.md)** - Contribution process
@@ -201,6 +207,7 @@ docs/
 ## 📋 Document Types & Formats
 
 ### 📖 Overviews & Navigation
+
 | Document | Purpose | Audience |
 |----------|---------|----------|
 | [README.md](README.md) | Main documentation hub | All users |
@@ -208,6 +215,7 @@ docs/
 | [SITEMAP.md](SITEMAP.md) | Site navigation map | All users |
 
 ### 🎯 Getting Started Documents
+
 | Document | Purpose | Time Required |
 |----------|---------|---------------|
 | [Quick Start](getting-started/quick-start.md) | 5-minute setup | 5 minutes |
@@ -216,6 +224,7 @@ docs/
 | [First Queries](getting-started/first-queries.md) | Learn the system | 15-30 minutes |
 
 ### 🔧 Technical Reference
+
 | Document | Purpose | Complexity |
 |----------|---------|------------|
 | [API Reference](API_REFERENCE.md) | REST API documentation | Intermediate |
@@ -223,6 +232,7 @@ docs/
 | [Technical Docs](TECHNICAL_DOCUMENTATION.md) | Implementation details | Expert |
 
 ### 📚 User Guides
+
 | Document | Purpose | Skill Level |
 |----------|---------|-------------|
 | [Best Practices](guides/best-practices.md) | Production patterns | Intermediate |
@@ -231,6 +241,7 @@ docs/
 | [Troubleshooting](guides/troubleshooting.md) | Problem resolution | All levels |
 
 ### 🚢 Deployment & Operations
+
 | Document | Purpose | Environment |
 |----------|---------|-------------|
 | [Deployment Operations](DEPLOYMENT_OPERATIONS.md) | Production deployment | All environments |
@@ -239,6 +250,7 @@ docs/
 | [Cloud Platforms](deployment/cloud-providers.md) | Managed platforms | Cloud |
 
 ### 💻 Development & Contributing
+
 | Document | Purpose | Audience |
 |----------|---------|----------|
 | [Developer Guide](DEVELOPER_GUIDE.md) | Development workflow | Contributors |
@@ -247,6 +259,7 @@ docs/
 | [Testing](development/testing.md) | Testing framework | All developers |
 
 ### 📝 Examples & Tutorials
+
 | Document | Purpose | Complexity |
 |----------|---------|------------|
 | [Basic Usage](examples/basic-usage/README.md) | Simple examples | Beginner |
@@ -259,6 +272,7 @@ docs/
 ### 📍 Quick Find
 
 **Need to...**
+
 - **Get started quickly?** → [Quick Start](getting-started/quick-start.md)
 - **Understand the API?** → [API Reference](API_REFERENCE.md)
 - **Deploy to production?** → [Deployment Operations](DEPLOYMENT_OPERATIONS.md)
@@ -273,6 +287,7 @@ docs/
 ### 🎯 By Use Case
 
 **I want to...**
+
 - **Use with AI assistants** → [Quick Start](getting-started/quick-start.md) + [First Queries](getting-started/first-queries.md)
 - **Build applications** → [API Reference](API_REFERENCE.md) + [Client SDKs](examples/client-implementations/README.md)
 - **Deploy to production** → [Deployment Operations](DEPLOYMENT_OPERATIONS.md) + [Best Practices](guides/best-practices.md)
@@ -282,6 +297,7 @@ docs/
 ### 🏷️ By Technology
 
 **Looking for...**
+
 - **Vector Search/Qdrant** → [Vector Tools](api/tools/vector-tools.md) + [Vector Examples](examples/basic-usage/vector-operations.py)
 - **Knowledge Graphs/Neo4j** → [Graph Tools](api/tools/graph-tools.md) + [Graph Examples](examples/basic-usage/graph-operations.py)
 - **Web Intelligence/Crawl4AI** → [Web Tools](api/tools/web-tools.md) + [Web Examples](examples/basic-usage/web-intelligence.py)
@@ -292,6 +308,7 @@ docs/
 ## 📊 Documentation Statistics
 
 ### 📈 Coverage Metrics
+
 - **Total Documents**: 50+ comprehensive guides
 - **Code Examples**: 25+ working implementations
 - **Architecture Diagrams**: 15+ Mermaid diagrams
@@ -300,6 +317,7 @@ docs/
 - **Use Cases**: 20+ real-world scenarios
 
 ### 🎯 Quality Indicators
+
 - ✅ **Production-Tested**: All guides verified in production
 - ✅ **Cross-Referenced**: Comprehensive internal linking
 - ✅ **Multi-Audience**: Clear paths for different users
@@ -308,6 +326,7 @@ docs/
 - ✅ **Version-Controlled**: Git-based documentation
 
 ### 🌐 GitHub Pages Features
+
 - **Automatic Navigation**: Generated from document structure
 - **Search Functionality**: Full-text search across all docs
 - **Mobile Responsive**: Optimized for all devices
@@ -328,6 +347,7 @@ docs/
 | **Security Issues** | `security@yourproject.com` | 24 hours |
 
 ### 🤝 Community Resources
+
 - **GitHub Repository**: [qdrant-neo4j-crawl4ai-mcp](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp)
 - **Documentation Site**: [GitHub Pages](https://bjornmelin.github.io/qdrant-neo4j-crawl4ai-mcp)
 - **Issue Tracker**: [GitHub Issues](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp/issues)

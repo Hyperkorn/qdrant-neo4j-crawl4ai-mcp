@@ -28,6 +28,7 @@ curl -X POST "http://localhost:8000/auth/token" \
 ```
 
 Response:
+
 ```json
 {
   "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...",
@@ -73,6 +74,7 @@ curl -X POST "http://localhost:8000/api/v1/vector/store" \
 ```
 
 Response:
+
 ```json
 {
   "status": "success",
@@ -151,6 +153,7 @@ curl -H "Authorization: Bearer $TOKEN" \
 ```
 
 Response includes collection statistics:
+
 ```json
 {
   "status": "success",
@@ -323,6 +326,7 @@ curl -X POST "http://localhost:8000/api/v1/intelligence/query" \
 ```
 
 The system will:
+
 1. Analyze the query intent
 2. Route to vector search for stored knowledge
 3. Supplement with graph relationships
@@ -968,15 +972,16 @@ Now that you've learned the basics:
 
 ## 📚 Additional Resources
 
-- **Interactive API Docs**: http://localhost:8000/docs
-- **Alternative Docs**: http://localhost:8000/redoc  
-- **Neo4j Browser**: http://localhost:7474
-- **Monitoring Dashboard**: http://localhost:3000
+- **Interactive API Docs**: <http://localhost:8000/docs>
+- **Alternative Docs**: <http://localhost:8000/redoc>  
+- **Neo4j Browser**: <http://localhost:7474>
+- **Monitoring Dashboard**: <http://localhost:3000>
 - **Technical Documentation**: [../TECHNICAL_DOCUMENTATION.md](../TECHNICAL_DOCUMENTATION.md)
 
 ---
 
 **🔗 Quick Links:**
+
 - [Configuration Guide](./configuration.md) - Customize your setup
 - [Troubleshooting](./troubleshooting.md) - Solve problems
 - [Installation Guide](./installation.md) - Advanced deployment options

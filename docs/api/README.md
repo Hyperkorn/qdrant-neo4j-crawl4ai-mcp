@@ -15,17 +15,20 @@ All services are unified under FastMCP 2.0 with enterprise-grade authentication,
 ## 🔗 Quick Navigation
 
 ### Core APIs
+
 - [MCP Tools](./tools/) - All available MCP tools for AI assistants
 - [MCP Resources](./resources/) - Data resources and collections
 - [Data Schemas](./schemas/) - Request/response models and validation
 
 ### Security & Operations
+
 - [Authentication](./authentication.md) - JWT tokens and API keys
 - [Rate Limiting](./rate-limiting.md) - Request throttling and quotas
 - [Webhooks](./webhooks.md) - Event notifications and integrations
 - [Client Libraries](./client-libraries.md) - SDKs and client examples
 
 ### Service-Specific Guides
+
 - [Vector Search API](./tools/vector-tools.md) - Qdrant vector operations
 - [Knowledge Graph API](./tools/graph-tools.md) - Neo4j graph operations
 - [Web Intelligence API](./tools/web-tools.md) - Crawl4AI web operations
@@ -65,11 +68,13 @@ graph TB
 The API supports two authentication methods:
 
 ### 1. JWT Bearer Tokens
+
 ```http
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
 ### 2. API Keys
+
 ```http
 X-API-Key: your-admin-api-key
 ```
@@ -79,6 +84,7 @@ See [Authentication Guide](./authentication.md) for detailed setup.
 ## 📊 Usage Examples
 
 ### Vector Search
+
 ```python
 import asyncio
 from mcp import ClientSession, StdioServerParameters
@@ -114,6 +120,7 @@ asyncio.run(semantic_search())
 ```
 
 ### Knowledge Graph Query
+
 ```python
 async def graph_analysis():
     async with stdio_client(server_params) as (read, write):
@@ -139,6 +146,7 @@ asyncio.run(graph_analysis())
 ```
 
 ### Web Content Extraction
+
 ```python
 async def web_crawl():
     async with stdio_client(server_params) as (read, write):
@@ -186,11 +194,13 @@ Default rate limits (configurable):
 ## 🏥 Health Monitoring
 
 ### Health Check Endpoints
+
 - `GET /health` - Service health status
 - `GET /ready` - Kubernetes readiness check
 - `GET /metrics` - Prometheus metrics
 
 ### Service-Specific Health
+
 - `GET /api/v1/vector/health` - Vector service health
 - Use MCP tool `get_graph_health` - Graph service health
 - Use MCP tool `web_service_health` - Web service health
@@ -198,6 +208,7 @@ Default rate limits (configurable):
 ## 🔧 Configuration
 
 ### Environment Variables
+
 ```env
 # Server Configuration
 MCP_SERVER_HOST=localhost
@@ -222,6 +233,7 @@ See [Configuration Guide](../configuration.md) for complete settings.
 ### MCP Tools
 
 #### Vector Operations
+
 - [`store_vector_document`](./tools/vector-tools.md#store_vector_document) - Store document with embedding
 - [`semantic_vector_search`](./tools/vector-tools.md#semantic_vector_search) - Semantic similarity search
 - [`create_vector_collection`](./tools/vector-tools.md#create_vector_collection) - Create collection
@@ -231,6 +243,7 @@ See [Configuration Guide](../configuration.md) for complete settings.
 - [`get_vector_service_stats`](./tools/vector-tools.md#get_vector_service_stats) - Service statistics
 
 #### Graph Operations
+
 - [`create_graph_node`](./tools/graph-tools.md#create_graph_node) - Create knowledge graph node
 - [`create_graph_relationship`](./tools/graph-tools.md#create_graph_relationship) - Create relationships
 - [`search_graph`](./tools/graph-tools.md#search_graph) - Search knowledge graph
@@ -241,6 +254,7 @@ See [Configuration Guide](../configuration.md) for complete settings.
 - [`get_graph_health`](./tools/graph-tools.md#get_graph_health) - Service health
 
 #### Web Operations
+
 - [`crawl_web_page`](./tools/web-tools.md#crawl_web_page) - Web crawling and extraction
 - [`extract_web_content`](./tools/web-tools.md#extract_web_content) - Targeted content extraction
 - [`capture_web_screenshot`](./tools/web-tools.md#capture_web_screenshot) - Screenshot capture
@@ -253,19 +267,23 @@ See [Configuration Guide](../configuration.md) for complete settings.
 ### REST API Endpoints
 
 #### Authentication
+
 - `POST /auth/token` - Create JWT access token
 - `GET /api/v1/profile` - Get user profile
 
 #### Unified Intelligence
+
 - `POST /api/v1/intelligence/query` - Unified multi-service query
 
 #### Vector Service (REST)
+
 - `POST /api/v1/vector/search` - Vector search
 - `POST /api/v1/vector/store` - Store vectors
 - `GET /api/v1/vector/collections` - List collections
 - `GET /api/v1/vector/health` - Health check
 
 #### Admin
+
 - `GET /api/v1/admin/stats` - System statistics
 
 ## 🔍 Error Handling
@@ -282,6 +300,7 @@ All APIs return consistent error responses:
 ```
 
 Common HTTP status codes:
+
 - `200` - Success
 - `400` - Bad Request (validation error)
 - `401` - Unauthorized (authentication required)
@@ -296,13 +315,14 @@ Common HTTP status codes:
 - **Documentation**: [Full Documentation](../../README.md)
 - **GitHub Issues**: [GitHub Repository](https://github.com/your-org/qdrant-neo4j-crawl4ai-mcp)
 - **Community**: [Discord Channel](#)
-- **Email**: support@your-domain.com
+- **Email**: <support@your-domain.com>
 
 ## 🔄 API Versioning
 
 Current API version: `v1`
 
 Version strategy:
+
 - **Major versions** (`v1` → `v2`): Breaking changes
 - **Minor updates**: New features, backward compatible
 - **Patch updates**: Bug fixes, security patches

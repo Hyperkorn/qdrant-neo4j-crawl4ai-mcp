@@ -78,18 +78,21 @@ graph TB
 ## Quick Navigation
 
 ### For Developers
+
 - **Getting Started**: [Developer Guide](../DEVELOPER_GUIDE.md)
 - **Implementation Details**: [Components](./components.md)
 - **API Reference**: [API Documentation](../API_REFERENCE.md)
 - **Integration**: [Integration Patterns](./integration-patterns.md)
 
 ### For Architects
+
 - **Design Decisions**: [ADRs](../adrs/README.md)
 - **System Design**: [System Overview](./system-overview.md)
 - **Scalability**: [Scalability Architecture](./scalability.md)
 - **Security**: [Security Architecture](./security.md)
 
 ### For DevOps/Platform Engineers
+
 - **Deployment**: [Deployment Operations](../DEPLOYMENT_OPERATIONS.md)
 - **Monitoring**: [Scalability](./scalability.md#monitoring-and-observability)
 - **Performance**: [Performance Benchmarks](./scalability.md#performance-characteristics)
@@ -97,26 +100,31 @@ graph TB
 ## Architecture Principles
 
 ### 1. **Agentic Intelligence**
+
 - Autonomous query routing and strategy selection
 - Intelligent result fusion with confidence scoring
 - Adaptive learning from query patterns and results
 
 ### 2. **Multi-Modal Integration**
+
 - Unified interface across vector, graph, and web intelligence
 - Service composition with FastMCP 2.0 patterns
 - Seamless data flow between heterogeneous systems
 
 ### 3. **Production Readiness**
+
 - Comprehensive authentication and authorization
 - Full observability with metrics, logging, and tracing
 - Graceful degradation and error handling
 
 ### 4. **Scalability by Design**
+
 - Async-first architecture for high concurrency
 - Horizontal scaling with stateless services
 - Intelligent caching and connection pooling
 
 ### 5. **Security First**
+
 - OWASP API Security compliance
 - Defense in depth with multiple security layers
 - Comprehensive audit logging and monitoring
@@ -135,24 +143,28 @@ graph TB
 ## Technology Stack
 
 ### Core Framework
+
 - **FastMCP 2.0**: Model Context Protocol server framework
 - **FastAPI**: High-performance async web framework
 - **Pydantic**: Type validation and serialization
 - **Uvicorn**: ASGI server with production configurations
 
 ### AI/ML Services
+
 - **Qdrant**: Vector database for semantic search
 - **Neo4j**: Graph database for relationship analysis
 - **Crawl4AI**: Web intelligence and content extraction
 - **Sentence Transformers**: Text embedding models
 
 ### Infrastructure
+
 - **Kubernetes**: Container orchestration
 - **Redis**: Caching and session management
 - **Prometheus + Grafana**: Metrics and monitoring
 - **Loki + Promtail**: Centralized logging
 
 ### Security & Auth
+
 - **JWT**: Token-based authentication
 - **OAuth 2.0**: Authorization framework
 - **TLS 1.3**: Transport layer security

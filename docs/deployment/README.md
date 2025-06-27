@@ -86,16 +86,19 @@ graph TB
 ## Deployment Options
 
 ### Quick Start
+
 - **[Docker Compose](./docker.md)** - Single-node development and testing
 - **[Local Development](../getting-started/installation.md)** - Developer setup
 
 ### Production Deployment
+
 - **[Kubernetes](./kubernetes.md)** - Scalable container orchestration
 - **[Cloud Providers](./cloud-providers.md)** - AWS, GCP, Azure specific guides
 - **[Monitoring](./monitoring.md)** - Observability and alerting
 - **[Security Hardening](./security-hardening.md)** - Production security
 
 ### Operations
+
 - **[Backup & Recovery](./backup-recovery.md)** - Data protection strategies
 - **[Performance Tuning](./performance-tuning.md)** - Optimization guides
 

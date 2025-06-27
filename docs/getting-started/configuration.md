@@ -404,6 +404,7 @@ data:
 ```
 
 Create secrets:
+
 ```bash
 # Generate and create secrets
 kubectl create secret generic qdrant-neo4j-crawl4ai-mcp-secrets \
@@ -551,6 +552,7 @@ echo "🎉 Configuration validation completed!"
 ```
 
 Make it executable and run:
+
 ```bash
 chmod +x validate-config.sh
 ./validate-config.sh
@@ -588,6 +590,7 @@ envsubst < config/template.env > .env
 ```
 
 Template example (`config/template.env`):
+
 ```env
 # Generated configuration for ${ENVIRONMENT}
 ENVIRONMENT=${ENVIRONMENT}
@@ -603,6 +606,7 @@ NEO4J_PASSWORD=${NEO4J_PASSWORD}
 ### Common Issues
 
 #### Missing Environment Variables
+
 ```bash
 # Check all environment variables
 printenv | grep -E "(QDRANT|NEO4J|REDIS|JWT)"
@@ -617,6 +621,7 @@ print('JWT_SECRET_KEY:', os.getenv('JWT_SECRET_KEY', 'NOT_SET'))
 ```
 
 #### Database Connection Issues
+
 ```bash
 # Test individual connections
 curl -v $QDRANT_URL
@@ -627,6 +632,7 @@ echo "RETURN 1 as test" | cypher-shell -a $NEO4J_URI -u $NEO4J_USER -p $NEO4J_PA
 ```
 
 #### Permission Issues
+
 ```bash
 # Check file permissions
 ls -la .env
@@ -661,6 +667,7 @@ After configuring your system:
 ---
 
 **🔗 Quick Links:**
+
 - [Installation Guide](./installation.md) - Set up the system
 - [First Queries](./first-queries.md) - Test your configuration
 - [Troubleshooting](./troubleshooting.md) - Solve configuration issues

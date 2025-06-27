@@ -5,16 +5,19 @@ Welcome to the development documentation for the **Unified MCP Intelligence Serv
 ## 📋 Table of Contents
 
 ### Getting Started
+
 - [Local Setup Guide](local-setup.md) - Environment setup and installation
 - [Testing Guidelines](testing.md) - Testing frameworks and strategies
 - [Debugging Tools](debugging.md) - Development debugging techniques
 
 ### Contributing
+
 - [Contributing Guidelines](contributing.md) - How to contribute to the project
 - [Code Style Guide](code-style.md) - Coding standards and formatting
 - [Release Process](release-process.md) - Versioning and release workflow
 
 ### Performance & Optimization
+
 - [Performance Testing](performance.md) - Benchmarking and optimization
 
 ## 🚀 Quick Start for Developers

@@ -67,6 +67,7 @@ docker-compose ps
 ```
 
 Expected output:
+
 ```
 NAME                         COMMAND                  SERVICE                      STATUS
 grafana-dev                  "/run.sh"                grafana                      Up
@@ -101,7 +102,7 @@ curl http://localhost:8000/health
 # }
 ```
 
-## 🎉 You're Ready!
+## 🎉 You're Ready
 
 Your agentic RAG system is now running! Here's what's available:
 
@@ -109,13 +110,13 @@ Your agentic RAG system is now running! Here's what's available:
 
 | Service | URL | Description |
 |---------|-----|-------------|
-| **API Documentation** | http://localhost:8000/docs | Interactive Swagger UI |
-| **Alternative Docs** | http://localhost:8000/redoc | ReDoc documentation |
-| **Health Status** | http://localhost:8000/health | System health check |
-| **Neo4j Browser** | http://localhost:7474 | Graph database interface |
-| **Grafana Dashboards** | http://localhost:3000 | Monitoring (admin/development) |
-| **Prometheus Metrics** | http://localhost:9090 | Metrics collection |
-| **Jaeger Tracing** | http://localhost:16686 | Distributed tracing |
+| **API Documentation** | <http://localhost:8000/docs> | Interactive Swagger UI |
+| **Alternative Docs** | <http://localhost:8000/redoc> | ReDoc documentation |
+| **Health Status** | <http://localhost:8000/health> | System health check |
+| **Neo4j Browser** | <http://localhost:7474> | Graph database interface |
+| **Grafana Dashboards** | <http://localhost:3000> | Monitoring (admin/development) |
+| **Prometheus Metrics** | <http://localhost:9090> | Metrics collection |
+| **Jaeger Tracing** | <http://localhost:16686> | Distributed tracing |
 
 ### 🔑 Default Credentials
 
@@ -141,6 +142,7 @@ curl -X POST "http://localhost:8000/auth/token" \
 ```
 
 Response:
+
 ```json
 {
   "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9...",
@@ -190,24 +192,28 @@ curl -X POST "http://localhost:8000/api/v1/vector/store" \
 After the quick start, you have:
 
 ### ✅ Vector Intelligence
+
 - **Qdrant** vector database running on port 6333
 - **Semantic search** capabilities ready
 - **Document storage** and retrieval working
 - **Embedding generation** with sentence-transformers
 
 ### ✅ Graph Intelligence  
+
 - **Neo4j** graph database running on port 7687
 - **Knowledge graph** construction ready
 - **Cypher query** capabilities
 - **Memory systems** for conversational AI
 
 ### ✅ Web Intelligence
+
 - **Crawl4AI** web crawling service
 - **Content extraction** capabilities
 - **Real-time data** processing
 - **Respectful crawling** with rate limits
 
 ### ✅ Production Features
+
 - **JWT authentication** with token-based access
 - **Rate limiting** protection
 - **Health monitoring** endpoints
@@ -220,6 +226,7 @@ After the quick start, you have:
 The system is pre-configured for development, but you can quickly customize:
 
 ### Change Default Collection
+
 ```bash
 # Edit .env file
 echo "DEFAULT_COLLECTION=my_custom_collection" >> .env
@@ -229,6 +236,7 @@ docker-compose restart qdrant-neo4j-crawl4ai-mcp
 ```
 
 ### Enable Production Mode
+
 ```bash
 # Update .env for production-like settings
 cat << 'EOF' >> .env
@@ -245,6 +253,7 @@ docker-compose restart
 ```
 
 ### Add Custom Embedding Model
+
 ```bash
 # Use a different embedding model
 echo "DEFAULT_EMBEDDING_MODEL=all-mpnet-base-v2" >> .env
@@ -315,7 +324,7 @@ curl http://localhost:8000/health
 docker-compose logs -f qdrant-neo4j-crawl4ai-mcp
 ```
 
-## 🎉 Success!
+## 🎉 Success
 
 You now have a fully functional agentic RAG system! The quick start gives you:
 
@@ -330,6 +339,7 @@ You now have a fully functional agentic RAG system! The quick start gives you:
 ---
 
 **🔗 Quick Links:**
+
 - [First Queries Guide](./first-queries.md) - Learn all the capabilities
 - [Configuration Guide](./configuration.md) - Customize your setup
 - [Troubleshooting](./troubleshooting.md) - Get help when needed

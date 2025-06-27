@@ -5,17 +5,20 @@ This directory contains simple, focused examples that demonstrate the core funct
 ## 📋 Examples Overview
 
 ### Core Service Examples
+
 - **[vector-operations.py](./vector-operations.py)** - Store and search documents with Qdrant
 - **[graph-operations.py](./graph-operations.py)** - Build knowledge graphs with Neo4j
 - **[web-intelligence.py](./web-intelligence.py)** - Extract web content with Crawl4AI
 - **[authentication.py](./authentication.py)** - Secure your MCP connections
 
 ### Simple Applications
+
 - **[document-qa-system/](./document-qa-system/)** - Complete Q&A system tutorial
 - **[knowledge-base-builder/](./knowledge-base-builder/)** - Build a knowledge base from web content
 - **[semantic-search-app/](./semantic-search-app/)** - Semantic search application
 
 ### Getting Started Utilities
+
 - **[mcp-client-setup.py](./mcp-client-setup.py)** - MCP client connection helper
 - **[health-check.py](./health-check.py)** - Verify service connectivity
 - **[data-setup.py](./data-setup.py)** - Load sample data for testing
@@ -65,6 +68,7 @@ python main.py
 ## 📚 Learning Progression
 
 ### Step 1: Individual Services
+
 Start with understanding each service independently:
 
 1. **Vector Operations** - Learn semantic search and document storage
@@ -72,6 +76,7 @@ Start with understanding each service independently:
 3. **Web Intelligence** - Master content extraction and analysis
 
 ### Step 2: Service Integration
+
 Combine services for more powerful applications:
 
 1. **Hybrid Search** - Vector + Graph search
@@ -79,6 +84,7 @@ Combine services for more powerful applications:
 3. **Multi-Modal Intelligence** - Text + Structure + Web data
 
 ### Step 3: Complete Applications
+
 Build full applications that showcase real-world usage:
 
 1. **Document Q&A System** - RAG with vector search
@@ -88,6 +94,7 @@ Build full applications that showcase real-world usage:
 ## 🛠️ Example Requirements
 
 ### Environment Setup
+
 ```bash
 # Install dependencies
 pip install mcp-client httpx asyncio python-dotenv
@@ -98,12 +105,14 @@ cp .env.example .env
 ```
 
 ### Required Services
+
 - **MCP Server**: Running on `http://localhost:8000` (or configured URL)
 - **Qdrant**: Available and accessible
 - **Neo4j**: Available and accessible
 - **Internet**: For web intelligence examples
 
 ### Authentication
+
 Most examples include optional authentication. For testing:
 
 ```python
@@ -161,6 +170,7 @@ After completing these examples, you should be able to:
 ### Common Issues
 
 **Connection Errors**
+
 ```bash
 # Check if server is running
 curl http://localhost:8000/health
@@ -170,12 +180,14 @@ python -c "import os; print(os.getenv('MCP_SERVER_URL'))"
 ```
 
 **Authentication Errors**
+
 ```bash
 # Test token generation
 python authentication.py
 ```
 
 **Service Unavailable**
+
 ```bash
 # Check individual service health
 python health-check.py --verbose

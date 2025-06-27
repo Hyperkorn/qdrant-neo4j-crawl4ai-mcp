@@ -821,6 +821,7 @@ async def monitor_graph_health():
 ### Node Design
 
 1. **Consistent Naming:**
+
    ```python
    # Good naming patterns
    "Geoffrey Hinton"  # Person names: First Last
@@ -833,6 +834,7 @@ async def monitor_graph_health():
    ```
 
 2. **Meaningful Properties:**
+
    ```python
    # Rich node properties
    {
@@ -856,6 +858,7 @@ async def monitor_graph_health():
 ### Relationship Modeling
 
 1. **Directional Relationships:**
+
    ```python
    # Clear direction and semantics
    "Neural Networks" --SUBSET_OF--> "Machine Learning"
@@ -864,6 +867,7 @@ async def monitor_graph_health():
    ```
 
 2. **Weighted Relationships:**
+
    ```python
    # Use weights to indicate strength
    {
@@ -877,6 +881,7 @@ async def monitor_graph_health():
 ### Query Optimization
 
 1. **Use Indexes:**
+
    ```cypher
    -- Create indexes for frequent queries
    CREATE INDEX node_name_index FOR (n:Node) ON (n.name)
@@ -884,6 +889,7 @@ async def monitor_graph_health():
    ```
 
 2. **Limit Results:**
+
    ```python
    # Always use LIMIT in queries
    query = """
@@ -895,6 +901,7 @@ async def monitor_graph_health():
    ```
 
 3. **Use Parameters:**
+
    ```python
    # Parameterized queries for security and performance
    await session.call_tool(
@@ -909,6 +916,7 @@ async def monitor_graph_health():
 ### Memory Management
 
 1. **Contextual Memories:**
+
    ```python
    # Associate memories with context
    memory = {
@@ -924,6 +932,7 @@ async def monitor_graph_health():
    ```
 
 2. **Memory Updates:**
+
    ```python
    # Update existing memories
    await session.call_tool(

@@ -53,6 +53,7 @@ from qdrant_neo4j_crawl4ai_mcp.models.vector_models import VectorSearchRequest
 ```
 
 **Import Order (enforced by ruff):**
+
 1. Standard library
 2. Third-party packages
 3. Local application modules
@@ -986,11 +987,11 @@ repos:
 
 ## 📚 Additional Resources
 
-- **Ruff Documentation**: https://docs.astral.sh/ruff/
-- **MyPy Documentation**: https://mypy.readthedocs.io/
-- **FastMCP Documentation**: https://fastmcp.readthedocs.io/
-- **Pydantic Documentation**: https://docs.pydantic.dev/
-- **Python Type Hints**: https://docs.python.org/3/library/typing.html
+- **Ruff Documentation**: <https://docs.astral.sh/ruff/>
+- **MyPy Documentation**: <https://mypy.readthedocs.io/>
+- **FastMCP Documentation**: <https://fastmcp.readthedocs.io/>
+- **Pydantic Documentation**: <https://docs.pydantic.dev/>
+- **Python Type Hints**: <https://docs.python.org/3/library/typing.html>
 
 ---
 

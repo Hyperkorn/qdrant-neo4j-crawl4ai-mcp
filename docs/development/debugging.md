@@ -291,6 +291,7 @@ class DebugMiddleware(BaseHTTPMiddleware):
 #### Issue: Vector Service Won't Initialize
 
 **Symptoms:**
+
 - `ServiceInitializationError` on startup
 - Qdrant connection failures
 - Embedding model loading errors
@@ -371,6 +372,7 @@ rm -rf ~/.cache/torch/sentence_transformers/
 #### Issue: Graph Service Connection Problems
 
 **Symptoms:**
+
 - Neo4j connection timeouts
 - Authentication failures
 - Cypher query errors

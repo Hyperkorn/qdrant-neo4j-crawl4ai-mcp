@@ -5,6 +5,7 @@ This tutorial guides you through building a complete document question-answering
 ## 🎯 What You'll Build
 
 A complete Q&A system that can:
+
 - **Ingest documents** from multiple sources (files, URLs, databases)
 - **Store knowledge** in both vector and graph databases
 - **Answer questions** using semantic search and relationship understanding
@@ -572,6 +573,7 @@ drug discovery, and personalized treatment plans.
 ### Running the System
 
 1. **Setup environment**:
+
    ```bash
    cd document-qa-system/
    pip install -r requirements.txt
@@ -580,6 +582,7 @@ drug discovery, and personalized treatment plans.
    ```
 
 2. **Run the application**:
+
    ```bash
    python main.py
    ```

@@ -15,6 +15,7 @@ Before contributing, please:
    - [Architecture Documentation](../ARCHITECTURE.md)
 
 2. **Set Up Development Environment**
+
    ```bash
    # Clone the repository
    git clone <repository-url>
@@ -573,6 +574,7 @@ type(scope): description
 ```
 
 **Types:**
+
 - `feat`: New feature
 - `fix`: Bug fix
 - `docs`: Documentation changes
@@ -582,6 +584,7 @@ type(scope): description
 - `chore`: Maintenance tasks
 
 **Examples:**
+
 ```
 feat(vector): add bulk vector upsert capability
 

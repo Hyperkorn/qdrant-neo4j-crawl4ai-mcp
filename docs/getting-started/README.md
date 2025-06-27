@@ -7,58 +7,71 @@ Welcome to the **Qdrant Neo4j Crawl4AI MCP Server** - a production-ready agentic
 Choose your path based on your role and needs:
 
 ### 🚀 [Quick Start Guide](./quick-start.md)
+
 **5-minute setup** - Get the system running with Docker Compose in minutes.
 
 ### 🔧 [Installation Guide](./installation.md)
+
 **Detailed setup** - Complete installation instructions for all deployment options.
 
 ### ⚙️ [Configuration Guide](./configuration.md)
+
 **System configuration** - Environment variables, security settings, and service configuration.
 
 ### 🎯 [First Queries Guide](./first-queries.md)
+
 **Getting started** - Your first vector searches, graph queries, and web intelligence operations.
 
 ### 🛠️ [Troubleshooting Guide](./troubleshooting.md)
+
 **Problem solving** - Common issues, solutions, and debugging techniques.
 
 ## 🎭 Role-Based Quick Starts
 
 ### 🤖 AI Assistant Developer
+
 You want to integrate intelligent RAG capabilities into your AI assistant.
 
 **Best Path**: [Quick Start](./quick-start.md) → [First Queries](./first-queries.md) → [MCP Client Integration](./first-queries.md#mcp-client-integration)
 
 **Key Features**:
+
 - Vector semantic search for knowledge retrieval
 - Graph memory for conversation context
 - Web intelligence for real-time information
 
 ### 📊 Data Scientist/Researcher
+
 You need to analyze and extract insights from complex data relationships.
 
 **Best Path**: [Installation](./installation.md) → [Configuration](./configuration.md) → [Advanced Queries](./first-queries.md#advanced-query-patterns)
 
 **Key Features**:
+
 - GraphRAG for knowledge discovery
 - Multi-modal embeddings
 - Advanced graph analytics
 
 ### 🏗️ DevOps/Infrastructure Engineer
+
 You want to deploy and manage the system in production.
 
 **Best Path**: [Installation](./installation.md) → [Kubernetes Deployment](./installation.md#kubernetes-deployment) → [Monitoring Setup](./troubleshooting.md#monitoring-and-observability)
 
 **Key Features**:
+
 - Container orchestration
 - Auto-scaling capabilities
 - Comprehensive monitoring
 
 ### 💻 Application Developer
+
 You're building applications that need intelligent data processing.
 
 **Best Path**: [Quick Start](./quick-start.md) → [API Integration](./first-queries.md#rest-api-usage) → [Configuration](./configuration.md)
 
 **Key Features**:
+
 - RESTful API interface
 - JWT authentication
 - OpenAPI documentation
@@ -113,24 +126,28 @@ graph TB
 ## ✨ Key Capabilities
 
 ### 🔍 Vector Intelligence
+
 - **Semantic search** across document collections
 - **Multi-modal embeddings** (text, code, structured data)
 - **Similarity scoring** with configurable thresholds
 - **Real-time indexing** of new content
 
 ### 🕸️ Graph Intelligence
+
 - **Knowledge graph** construction and querying
 - **Relationship analysis** and path finding
 - **Memory systems** for conversational AI
 - **GraphRAG** for enhanced retrieval
 
 ### 🌐 Web Intelligence
+
 - **Smart web crawling** with content extraction
 - **Real-time data** from web sources
 - **Content analysis** and structure detection
 - **Rate-limited** and respectful crawling
 
 ### 🔒 Production Features
+
 - **JWT authentication** with role-based access
 - **Rate limiting** and security headers
 - **Health monitoring** with Prometheus metrics
@@ -141,12 +158,14 @@ graph TB
 Before you begin, ensure you have:
 
 ### Required
+
 - **Python 3.11+** with pip or uv
 - **Docker** and Docker Compose
 - **Git** for repository management
 - **4GB+ RAM** for all services
 
 ### Optional (for advanced deployment)
+
 - **Kubernetes cluster** for production deployment
 - **Redis** for enhanced caching (included in Docker setup)
 - **Prometheus/Grafana** for monitoring (included)
@@ -154,12 +173,14 @@ Before you begin, ensure you have:
 ## 🚦 System Requirements
 
 ### Minimum (Development)
+
 - **CPU**: 2 cores
 - **RAM**: 4GB
 - **Storage**: 10GB free space
 - **Network**: Internet connection for web intelligence
 
 ### Recommended (Production)
+
 - **CPU**: 4+ cores
 - **RAM**: 8GB+
 - **Storage**: 50GB+ SSD

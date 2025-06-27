@@ -864,18 +864,21 @@ async def startup_event():
 ## 🆘 See Also
 
 ### Essential Reading
+
 - **[Architecture Overview](../ARCHITECTURE.md)** - Understand the system design
 - **[Security Hardening](security-hardening.md)** - Comprehensive security practices
 - **[Performance Optimization](performance-optimization.md)** - Advanced performance tuning
 - **[Monitoring & Observability](monitoring-observability.md)** - Production monitoring setup
 
 ### Quick References
+
 - **[Configuration Guide](../getting-started/configuration.md)** - Environment setup
 - **[Troubleshooting Guide](troubleshooting.md)** - Problem resolution
 - **[API Reference](../API_REFERENCE.md)** - Complete API documentation
 - **[Deployment Operations](../DEPLOYMENT_OPERATIONS.md)** - Production deployment
 
 ### Advanced Topics
+
 - **[Customization Guide](customization.md)** - Extending the system
 - **[Migration Guide](migration.md)** - Upgrade procedures
 - **[Architecture Decision Records](../adrs/README.md)** - Design decisions

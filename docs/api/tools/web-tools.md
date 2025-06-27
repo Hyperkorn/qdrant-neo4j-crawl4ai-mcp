@@ -814,6 +814,7 @@ async def analyze_performance_trends():
 ### Respectful Crawling
 
 1. **Check robots.txt:**
+
    ```python
    # The service automatically checks robots.txt
    # You can verify compliance in the response
@@ -822,6 +823,7 @@ async def analyze_performance_trends():
    ```
 
 2. **Rate Limiting:**
+
    ```python
    # Use appropriate delays between requests
    await session.call_tool(
@@ -835,6 +837,7 @@ async def analyze_performance_trends():
    ```
 
 3. **Concurrent Limits:**
+
    ```python
    # Monitor active crawls
    health = await session.call_tool("web_service_health")
@@ -845,6 +848,7 @@ async def analyze_performance_trends():
 ### Content Extraction Optimization
 
 1. **Choose Appropriate Strategy:**
+
    ```python
    # For known site structures
    structured_content = await session.call_tool(
@@ -868,6 +872,7 @@ async def analyze_performance_trends():
    ```
 
 2. **Structured Data Extraction:**
+
    ```python
    # Define clear schemas for consistent results
    product_schema = {
@@ -886,6 +891,7 @@ async def analyze_performance_trends():
 ### Screenshot Best Practices
 
 1. **Viewport Considerations:**
+
    ```python
    # Desktop viewport
    desktop = {"width": 1920, "height": 1080}
@@ -898,6 +904,7 @@ async def analyze_performance_trends():
    ```
 
 2. **Wait for Dynamic Content:**
+
    ```python
    # Wait for specific elements
    await session.call_tool(
@@ -913,6 +920,7 @@ async def analyze_performance_trends():
 ### Monitoring Setup
 
 1. **Strategic Monitor Placement:**
+
    ```python
    # Monitor critical pages
    critical_monitors = [
@@ -930,6 +938,7 @@ async def analyze_performance_trends():
    ```
 
 2. **Webhook Integration:**
+
    ```python
    # Set up webhook for notifications
    webhook_url = "https://your-app.com/webhooks/change-detected"

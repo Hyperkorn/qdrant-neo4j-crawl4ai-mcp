@@ -465,6 +465,7 @@ if health['status'] != 'healthy':
 ### Content Preparation
 
 1. **Text Preprocessing:**
+
    ```python
    import re
    
@@ -479,6 +480,7 @@ if health['status'] != 'healthy':
    ```
 
 2. **Chunking Strategy:**
+
    ```python
    def chunk_text(text, max_length=1000, overlap=100):
        chunks = []
@@ -504,6 +506,7 @@ if health['status'] != 'healthy':
    - Use `Euclidean` for spatial/numerical data
 
 3. **Collection Naming:**
+
    ```python
    # Good collection names
    "documents_2024"
@@ -518,6 +521,7 @@ if health['status'] != 'healthy':
 ### Search Optimization
 
 1. **Query Formulation:**
+
    ```python
    # Good queries
    "machine learning classification algorithms"
@@ -529,6 +533,7 @@ if health['status'] != 'healthy':
    ```
 
 2. **Filter Usage:**
+
    ```python
    # Efficient filtering
    filters = {

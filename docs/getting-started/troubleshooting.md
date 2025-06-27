@@ -64,6 +64,7 @@ echo "Grafana: http://localhost:3000"
 ```
 
 Make it executable and run:
+
 ```bash
 chmod +x quick-health-check.sh
 ./quick-health-check.sh
@@ -76,12 +77,14 @@ chmod +x quick-health-check.sh
 #### Issue: Docker Compose fails to start services
 
 **Symptoms:**
+
 ```bash
 docker-compose up -d
 # Returns errors or services show as "unhealthy"
 ```
 
 **Diagnosis:**
+
 ```bash
 # Check logs for specific errors
 docker-compose logs
@@ -96,6 +99,7 @@ docker-compose logs redis
 **Solutions:**
 
 **Port Conflicts:**
+
 ```bash
 # Check what's using the ports
 sudo netstat -tulpn | grep :8000
@@ -111,6 +115,7 @@ sudo kill -9 $(sudo lsof -t -i:8000)
 ```
 
 **Memory Issues:**
+
 ```bash
 # Check Docker memory usage
 docker stats
@@ -124,6 +129,7 @@ docker-compose up -d qdrant neo4j redis qdrant-neo4j-crawl4ai-mcp
 ```
 
 **Permission Issues:**
+
 ```bash
 # Docker permission denied
 sudo usermod -aG docker $USER
@@ -138,6 +144,7 @@ sudo docker-compose up -d
 #### Issue: 401 Unauthorized errors
 
 **Symptoms:**
+
 ```bash
 curl http://localhost:8000/api/v1/profile
 # {"error": "Could not validate credentials", "status_code": 401}
@@ -146,6 +153,7 @@ curl http://localhost:8000/api/v1/profile
 **Solutions:**
 
 **Get a new token:**
+
 ```bash
 # Generate new token
 TOKEN=$(curl -s -X POST "http://localhost:8000/auth/token" \
@@ -161,6 +169,7 @@ curl -H "Authorization: Bearer $TOKEN" \
 ```
 
 **Check JWT configuration:**
+
 ```bash
 # Verify JWT secret is set
 docker-compose exec qdrant-neo4j-crawl4ai-mcp env | grep JWT_SECRET_KEY
@@ -175,6 +184,7 @@ docker-compose restart qdrant-neo4j-crawl4ai-mcp
 #### Issue: Vector search returns "service unavailable"
 
 **Symptoms:**
+
 ```bash
 curl -X POST "http://localhost:8000/api/v1/vector/search" \
   -H "Authorization: Bearer $TOKEN" \
@@ -183,6 +193,7 @@ curl -X POST "http://localhost:8000/api/v1/vector/search" \
 ```
 
 **Diagnosis:**
+
 ```bash
 # Check Qdrant directly
 curl http://localhost:6333/
@@ -195,6 +206,7 @@ docker-compose exec qdrant-neo4j-crawl4ai-mcp curl http://qdrant:6333/
 **Solutions:**
 
 **Qdrant not ready:**
+
 ```bash
 # Wait for Qdrant to fully start
 docker-compose logs qdrant | grep "Qdrant HTTP listening"
@@ -207,6 +219,7 @@ curl http://localhost:6333/health
 ```
 
 **Network issues:**
+
 ```bash
 # Check Docker network
 docker network ls
@@ -219,6 +232,7 @@ docker-compose exec qdrant-neo4j-crawl4ai-mcp nslookup qdrant
 #### Issue: Neo4j connection failures
 
 **Diagnosis:**
+
 ```bash
 # Test Neo4j connectivity
 docker-compose exec qdrant-neo4j-crawl4ai-mcp nc -zv neo4j 7687
@@ -234,6 +248,7 @@ echo "RETURN 1 as test" | \
 **Solutions:**
 
 **Authentication issues:**
+
 ```bash
 # Reset Neo4j password
 docker-compose stop neo4j
@@ -246,6 +261,7 @@ docker-compose restart qdrant-neo4j-crawl4ai-mcp
 ```
 
 **Memory issues:**
+
 ```bash
 # Check Neo4j memory settings in docker-compose.yml
 # Reduce memory if needed:
@@ -258,6 +274,7 @@ docker-compose restart qdrant-neo4j-crawl4ai-mcp
 #### Issue: Slow response times or timeouts
 
 **Diagnosis:**
+
 ```bash
 # Check response times
 time curl http://localhost:8000/health
@@ -273,6 +290,7 @@ docker-compose logs qdrant-neo4j-crawl4ai-mcp | grep -i "slow\|timeout"
 **Solutions:**
 
 **Resource optimization:**
+
 ```bash
 # Update .env for better performance
 cat << 'EOF' >> .env
@@ -287,6 +305,7 @@ docker-compose restart qdrant-neo4j-crawl4ai-mcp
 ```
 
 **Database optimization:**
+
 ```bash
 # Optimize Qdrant
 curl -X POST "http://localhost:6333/collections/your_collection/index" \
@@ -303,6 +322,7 @@ curl -X POST "http://localhost:6333/collections/your_collection/index" \
 #### Issue: Crawl4AI timeouts or failures
 
 **Symptoms:**
+
 ```bash
 # Crawling requests timeout or return errors
 curl -X POST "http://localhost:8000/api/v1/web/crawl" \
@@ -314,6 +334,7 @@ curl -X POST "http://localhost:8000/api/v1/web/crawl" \
 **Solutions:**
 
 **Increase timeouts:**
+
 ```bash
 # Update .env
 cat << 'EOF' >> .env
@@ -326,6 +347,7 @@ docker-compose restart qdrant-neo4j-crawl4ai-mcp
 ```
 
 **Network issues:**
+
 ```bash
 # Test network connectivity from container
 docker-compose exec qdrant-neo4j-crawl4ai-mcp curl -I https://example.com
@@ -487,10 +509,10 @@ curl -X POST \
 
 | Tool | URL | Credentials | Purpose |
 |------|-----|-------------|---------|
-| **Grafana** | http://localhost:3000 | admin/development | Dashboards and alerts |
-| **Prometheus** | http://localhost:9090 | None | Metrics collection |
-| **Jaeger** | http://localhost:16686 | None | Distributed tracing |
-| **Loki** | http://localhost:3100 | None | Log aggregation |
+| **Grafana** | <http://localhost:3000> | admin/development | Dashboards and alerts |
+| **Prometheus** | <http://localhost:9090> | None | Metrics collection |
+| **Jaeger** | <http://localhost:16686> | None | Distributed tracing |
+| **Loki** | <http://localhost:3100> | None | Log aggregation |
 
 ### Key Metrics to Monitor
 
@@ -779,7 +801,7 @@ Before seeking help, ensure you have:
 - [ ] **Run the quick health check** script
 - [ ] **Checked the logs** for error messages
 - [ ] **Verified system requirements** are met
-- [ ] **Tested with default configuration** 
+- [ ] **Tested with default configuration**
 - [ ] **Collected diagnostic information**
 - [ ] **Documented the exact error** messages and steps to reproduce
 
@@ -841,16 +863,18 @@ Set up regular monitoring:
 
 ---
 
-## 🎉 Success!
+## 🎉 Success
 
 You now have comprehensive troubleshooting tools and knowledge to keep your Qdrant Neo4j Crawl4AI MCP Server running smoothly.
 
 **🔗 Quick Links:**
+
 - [Configuration Guide](./configuration.md) - Optimize your setup
 - [First Queries Guide](./first-queries.md) - Test functionality
 - [Installation Guide](./installation.md) - Reinstall if needed
 
-**📞 Still need help?** 
+**📞 Still need help?**
+
 - Check the [examples directory](../examples/) for working configurations
 - Review the [API documentation](../API_REFERENCE.md) for endpoint details
 - Consult the [technical documentation](../TECHNICAL_DOCUMENTATION.md) for architecture details

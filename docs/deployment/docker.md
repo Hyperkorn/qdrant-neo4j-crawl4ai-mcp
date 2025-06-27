@@ -818,6 +818,7 @@ groups:
 ### Common Issues
 
 1. **Port Conflicts**
+
    ```bash
    # Check port usage
    sudo netstat -tlnp | grep :8000
@@ -827,6 +828,7 @@ groups:
    ```
 
 2. **Memory Issues**
+
    ```bash
    # Increase Docker memory
    # Add to .env
@@ -834,6 +836,7 @@ groups:
    ```
 
 3. **Permission Issues**
+
    ```bash
    # Fix volume permissions
    sudo chown -R 1000:1000 ./data

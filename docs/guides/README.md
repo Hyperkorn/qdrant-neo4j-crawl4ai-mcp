@@ -35,6 +35,7 @@ This section provides comprehensive guides for implementing, deploying, and main
 **Goal**: Deploy a production-ready agentic RAG system from scratch
 
 **Recommended Path**:
+
 1. **[Best Practices](best-practices.md)** - Understand core production patterns
 2. **[Security Hardening](security-hardening.md)** - Configure security baseline
 3. **[Performance Optimization](performance-optimization.md)** - Scale for your workload
@@ -47,6 +48,7 @@ This section provides comprehensive guides for implementing, deploying, and main
 **Goal**: Improve performance and reliability of existing deployment
 
 **Recommended Path**:
+
 1. **[Performance Optimization](performance-optimization.md)** - Identify bottlenecks and optimizations
 2. **[Monitoring & Observability](monitoring-observability.md)** - Enhanced monitoring and alerting
 3. **[Troubleshooting](troubleshooting.md)** - Advanced diagnostic capabilities
@@ -58,6 +60,7 @@ This section provides comprehensive guides for implementing, deploying, and main
 **Goal**: Ensure security posture meets enterprise requirements
 
 **Recommended Path**:
+
 1. **[Security Hardening](security-hardening.md)** - Complete security assessment and hardening
 2. **[Best Practices](best-practices.md)** - Operational security patterns
 3. **[Monitoring & Observability](monitoring-observability.md)** - Security monitoring and alerting
@@ -69,6 +72,7 @@ This section provides comprehensive guides for implementing, deploying, and main
 **Goal**: Extend or customize the system for specific requirements
 
 **Recommended Path**:
+
 1. **[Customization Guide](customization.md)** - Extension patterns and architectures
 2. **[Best Practices](best-practices.md)** - Maintain production quality
 3. **[Performance Optimization](performance-optimization.md)** - Optimize custom components
@@ -80,6 +84,7 @@ This section provides comprehensive guides for implementing, deploying, and main
 **Goal**: Diagnose and resolve production problems
 
 **Immediate Path**:
+
 1. **[Troubleshooting](troubleshooting.md)** - Rapid problem diagnosis
 2. **[Monitoring & Observability](monitoring-observability.md)** - Deep diagnostic capabilities
 
@@ -90,16 +95,19 @@ This section provides comprehensive guides for implementing, deploying, and main
 Before using these guides, ensure you have:
 
 ### Basic Knowledge
+
 - ✅ Completed [Getting Started Guide](../getting-started/README.md)
 - ✅ Familiar with [System Architecture](../ARCHITECTURE.md)
 - ✅ Understanding of [API Reference](../API_REFERENCE.md)
 
 ### Infrastructure Access
+
 - ✅ Production environment access with appropriate permissions
 - ✅ Monitoring and logging infrastructure
 - ✅ CI/CD pipeline integration capabilities
 
 ### Tools & Technologies
+
 - ✅ Kubernetes cluster access (for K8s deployments)
 - ✅ Docker and container orchestration familiarity
 - ✅ Prometheus/Grafana monitoring stack
@@ -108,6 +116,7 @@ Before using these guides, ensure you have:
 ## 🎯 Production Deployment Framework
 
 ### Phase 1: Foundation (Week 1)
+
 ```mermaid
 graph LR
     A[Security Baseline] --> B[Core Infrastructure]
@@ -120,6 +129,7 @@ graph LR
 - **Monitoring**: [Monitoring Guide](monitoring-observability.md) - Sections 1-2
 
 ### Phase 2: Optimization (Week 2)
+
 ```mermaid
 graph LR
     A[Performance Tuning] --> B[Advanced Monitoring]
@@ -132,6 +142,7 @@ graph LR
 - **Validation**: [Troubleshooting Guide](troubleshooting.md) - Section 6 (Load Testing)
 
 ### Phase 3: Production Readiness (Week 3-4)
+
 ```mermaid
 graph LR
     A[Disaster Recovery] --> B[Compliance]
@@ -146,6 +157,7 @@ graph LR
 ## 🏗️ Architecture Patterns
 
 ### Multi-Tenant Enterprise Pattern
+
 ```mermaid
 graph TB
     subgraph "Tenant A"
@@ -177,6 +189,7 @@ graph TB
 **Covered in**: [Best Practices Guide](best-practices.md) - Section 4
 
 ### High-Availability Pattern
+
 ```mermaid
 graph TB
     subgraph "Primary Region"
@@ -203,6 +216,7 @@ graph TB
 **Covered in**: [Performance Optimization Guide](performance-optimization.md) - Section 4
 
 ### Zero-Trust Security Pattern
+
 ```mermaid
 graph TB
     subgraph "External"
@@ -234,6 +248,7 @@ graph TB
 ## 📊 Success Metrics
 
 ### Performance Benchmarks
+
 | Metric | Target | Enterprise Target | Notes |
 |--------|--------|-------------------|-------|
 | Query Latency | <200ms | <100ms | P95 for simple queries |
@@ -243,6 +258,7 @@ graph TB
 | MTTR | <15min | <5min | Mean time to recovery |
 
 ### Security Compliance
+
 | Framework | Coverage | Validation Method |
 |-----------|----------|-------------------|
 | **OWASP Top 10** | 100% | Automated scanning + manual review |
@@ -251,6 +267,7 @@ graph TB
 | **GDPR** | Data protection controls | Legal review |
 
 ### Operational Excellence
+
 | Area | Target | Measurement |
 |------|--------|-------------|
 | **Deployment Frequency** | Daily | CI/CD metrics |
@@ -261,35 +278,44 @@ graph TB
 ## 🚀 Getting Started with Advanced Guides
 
 ### 1. Choose Your Path
+
 Based on your primary goal:
+
 - **New Deployment**: Start with [Best Practices](best-practices.md)
 - **Performance Issues**: Start with [Performance Optimization](performance-optimization.md)
 - **Security Review**: Start with [Security Hardening](security-hardening.md)
 - **Production Problems**: Start with [Troubleshooting](troubleshooting.md)
 
 ### 2. Prepare Your Environment
+
 Ensure you have:
+
 - Production or production-like environment access
 - Monitoring and logging infrastructure
 - Security scanning tools configured
 - Team coordination for changes
 
 ### 3. Follow the Framework
+
 Use the production deployment framework above to ensure comprehensive coverage of all critical areas.
 
 ## 🆘 Support & Community
 
 ### Documentation Issues
+
 - **Unclear Instructions**: [Open documentation issue](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp/issues)
 - **Missing Information**: [Start a discussion](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp/discussions)
 
 ### Production Support
+
 - **Security Issues**: `security@yourproject.com`
 - **Performance Issues**: [Performance troubleshooting](troubleshooting.md#performance-issues)
 - **Operational Questions**: [Community Discord](https://discord.gg/mcp-community)
 
 ### Contributing to Guides
+
 We welcome contributions to improve these guides:
+
 1. **Experience Reports**: Share your production deployment stories
 2. **Pattern Additions**: Contribute new architectural patterns
 3. **Tool Integrations**: Add support for additional monitoring/security tools
@@ -298,12 +324,14 @@ We welcome contributions to improve these guides:
 ## 📅 Guide Maintenance
 
 ### Update Schedule
+
 - **Monthly**: Security best practices and vulnerability assessments
 - **Quarterly**: Performance benchmarks and optimization techniques
 - **Bi-annually**: Architecture patterns and technology updates
 - **As needed**: Critical security updates and urgent fixes
 
 ### Version Compatibility
+
 | Guide Version | System Compatibility | Status |
 |---------------|---------------------|--------|
 | **v1.0** | System v1.0+ | Current |

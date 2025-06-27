@@ -5,7 +5,9 @@ This directory contains proven integration patterns and architectural approaches
 ## 🏗️ Available Integration Patterns
 
 ### 🔌 [API Gateway Pattern](./api-gateway/)
+
 Centralized API management and routing:
+
 - **Request Routing** - Route requests to appropriate MCP services
 - **Authentication & Authorization** - Centralized security enforcement
 - **Rate Limiting & Throttling** - Protect backend services from overload
@@ -13,7 +15,9 @@ Centralized API management and routing:
 - **Monitoring & Analytics** - Centralized request/response monitoring
 
 ### 🔄 [Event-Driven Architecture](./event-driven/)
+
 Asynchronous processing and event streaming:
+
 - **Message Queues** - Reliable async processing with Redis/RabbitMQ
 - **Event Sourcing** - Track all data changes as events
 - **CQRS Pattern** - Separate read/write operations for scalability
@@ -21,7 +25,9 @@ Asynchronous processing and event streaming:
 - **Saga Pattern** - Distributed transaction management
 
 ### 🐳 [Microservices Deployment](./microservices/)
+
 Container-based distributed deployment:
+
 - **Service Mesh** - Inter-service communication with Istio/Linkerd
 - **Container Orchestration** - Kubernetes deployment patterns
 - **Service Discovery** - Dynamic service registration and discovery
@@ -29,7 +35,9 @@ Container-based distributed deployment:
 - **Distributed Tracing** - End-to-end request tracing
 
 ### ☁️ [Cloud-Native Patterns](./cloud-native/)
+
 Cloud platform integration approaches:
+
 - **Serverless Integration** - AWS Lambda, Azure Functions, Google Cloud Functions
 - **Managed Services** - Cloud-managed databases and message queues
 - **Auto-scaling** - Dynamic scaling based on load and metrics
@@ -37,7 +45,9 @@ Cloud platform integration approaches:
 - **Disaster Recovery** - Backup, replication, and failover patterns
 
 ### 🔗 [Legacy System Integration](./legacy-integration/)
+
 Connect with existing enterprise systems:
+
 - **Database Integration** - Connect to SQL/NoSQL databases
 - **API Adaptation** - Integrate with REST/SOAP/GraphQL APIs
 - **File System Integration** - Process files from shared storage
@@ -45,7 +55,9 @@ Connect with existing enterprise systems:
 - **Change Data Capture** - Real-time sync with legacy systems
 
 ### 🌊 [Stream Processing](./stream-processing/)
+
 Real-time data processing and analytics:
+
 - **Real-time Ingestion** - Continuous data ingestion from multiple sources
 - **Stream Analytics** - Real-time analysis and alerting
 - **Complex Event Processing** - Pattern detection in event streams
@@ -69,11 +81,13 @@ graph TB
 ```
 
 **Benefits:**
+
 - Clear separation of concerns
 - Easy to understand and maintain
 - Standard enterprise pattern
 
 **Use Cases:**
+
 - Traditional enterprise applications
 - Monolithic to microservices migration
 - Systems with complex business logic
@@ -91,11 +105,13 @@ graph TB
 ```
 
 **Benefits:**
+
 - Loose coupling between components
 - High scalability and resilience
 - Real-time processing capabilities
 
 **Use Cases:**
+
 - Real-time analytics systems
 - IoT data processing
 - High-throughput applications
@@ -115,11 +131,13 @@ graph TB
 ```
 
 **Benefits:**
+
 - Standardized API contracts
 - Easy integration with external systems
 - Centralized API management
 
 **Use Cases:**
+
 - Public API platforms
 - Partner integrations
 - Mobile and web applications
@@ -140,11 +158,13 @@ graph TB
 ```
 
 **Benefits:**
+
 - Optimized read and write operations
 - Independent scaling of read/write sides
 - Event sourcing capabilities
 
 **Use Cases:**
+
 - High-read-volume applications
 - Complex domain models
 - Audit trail requirements
@@ -881,24 +901,28 @@ spec:
 ## 📝 Best Practices Summary
 
 ### 1. Design Principles
+
 - **Loose Coupling**: Services should be independently deployable
 - **High Cohesion**: Related functionality should be grouped together
 - **Single Responsibility**: Each service should have one clear purpose
 - **Fail Fast**: Detect and handle errors early in the request flow
 
 ### 2. Operational Excellence
+
 - **Monitoring**: Comprehensive metrics, logs, and tracing
 - **Alerting**: Proactive alerts for performance and error conditions
 - **Documentation**: Keep integration docs up-to-date
 - **Testing**: Automated testing at all integration points
 
 ### 3. Security by Design
+
 - **Zero Trust**: Never trust, always verify
 - **Defense in Depth**: Multiple layers of security controls
 - **Least Privilege**: Minimum necessary permissions
 - **Audit Logging**: Comprehensive audit trails
 
 ### 4. Performance Optimization
+
 - **Caching**: Multi-level caching strategies
 - **Connection Pooling**: Reuse connections efficiently
 - **Circuit Breakers**: Prevent cascade failures

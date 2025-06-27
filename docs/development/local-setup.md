@@ -127,6 +127,7 @@ docker-compose logs neo4j
 ```
 
 **Services Started:**
+
 - **Qdrant**: Vector database on port 6333
 - **Neo4j**: Graph database on ports 7474 (HTTP) and 7687 (Bolt)
 - **Prometheus**: Metrics collection on port 9090
@@ -233,11 +234,11 @@ curl -H "Authorization: Bearer $TOKEN" http://localhost:8000/api/v1/profile
 
 ### 4. Access Web Interfaces
 
-- **API Documentation**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
-- **Neo4j Browser**: http://localhost:7474 (neo4j/devpassword)
-- **Qdrant Web UI**: http://localhost:6333/dashboard
-- **Grafana**: http://localhost:3000 (admin/admin)
+- **API Documentation**: <http://localhost:8000/docs>
+- **ReDoc**: <http://localhost:8000/redoc>
+- **Neo4j Browser**: <http://localhost:7474> (neo4j/devpassword)
+- **Qdrant Web UI**: <http://localhost:6333/dashboard>
+- **Grafana**: <http://localhost:3000> (admin/admin)
 
 ## 🔧 Development Workflow
 

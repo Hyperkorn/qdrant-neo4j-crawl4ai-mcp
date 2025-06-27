@@ -147,18 +147,21 @@ graph TB
 ### Key Capabilities
 
 #### 🧠 Intelligent Query Processing
+
 - **Agentic Router**: Autonomous query analysis and pipeline selection
 - **Multi-Modal Search**: Combined vector, graph, and web intelligence
 - **Context-Aware Results**: Relevance scoring with confidence metrics
 - **Iterative Refinement**: Progressive result improvement through feedback
 
 #### 🔍 Advanced Search Capabilities
+
 - **Semantic Search**: Vector similarity with 384-dimensional embeddings
 - **Graph Reasoning**: Multi-hop relationship traversal and pattern matching
 - **Web Intelligence**: Real-time content extraction and knowledge augmentation
 - **Hybrid Fusion**: RRF algorithm combining multiple search modalities
 
 #### 🏭 Production-Ready Features
+
 - **Auto-Scaling**: Kubernetes HPA with 3-20 replica scaling
 - **Rate Limiting**: Configurable request throttling and quota management
 - **Security**: JWT authentication, RBAC, and input validation
@@ -167,46 +170,58 @@ graph TB
 ## 🚀 Quick Start Paths
 
 ### 1. Quick Start (5 minutes)
+
 ```bash
 # Clone and start with Docker Compose
 git clone https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp.git
 cd qdrant-neo4j-crawl4ai-mcp
 docker-compose up -d
 ```
+
 **→ [Quick Start Guide](getting-started/quick-start.md)**
 
 ### 2. Complete Installation (15 minutes)
+
 ```bash
 # Detailed setup with configuration
 # See installation guide for all deployment options
 # Docker, Kubernetes, Local, Cloud
 ```
+
 **→ [Installation Guide](getting-started/installation.md)**
 
 ### 3. First Queries (10 minutes)
+
 ```bash
 # Learn to use vector search, graph queries, and web intelligence
 # Get authentication token and run your first intelligent queries
 ```
+
 **→ [First Queries Guide](getting-started/first-queries.md)**
 
 ## 🎯 Use Case Navigation
 
 ### For AI Assistant Users
+
 **Goal**: Use MCP tools in Claude, ChatGPT, or other AI assistants
+
 - **Start**: [Quick Start Guide](getting-started/quick-start.md)
 - **Learn**: [First Queries Guide](getting-started/first-queries.md)
 - **Advanced**: [Agentic Workflows](guides/agentic-workflows.md)
 
 ### For API Developers
+
 **Goal**: Integrate the server into applications
+
 - **Start**: [Installation Guide](getting-started/installation.md)
 - **Learn**: [First Queries Guide](getting-started/first-queries.md)
 - **Reference**: [API Documentation](API_REFERENCE.md)
 - **Examples**: [Client Implementations](examples/client-implementations/README.md)
 
 ### For DevOps/SRE Teams  
+
 **Goal**: Deploy and operate in production
+
 - **Start**: [Installation Guide](getting-started/installation.md)
 - **Configure**: [Configuration Guide](getting-started/configuration.md)
 - **Troubleshoot**: [Troubleshooting Guide](getting-started/troubleshooting.md)
@@ -214,7 +229,9 @@ docker-compose up -d
 - **Monitor**: [Monitoring & Observability](deployment/monitoring.md)
 
 ### For System Architects
+
 **Goal**: Understand design and integrate with existing systems
+
 - **Start**: [Getting Started Overview](getting-started/README.md)
 - **Design**: [System Architecture](ARCHITECTURE.md)
 - **Decisions**: [Architecture Decision Records](adrs/README.md)
@@ -234,12 +251,14 @@ docker-compose up -d
 ## 🔗 Related Resources
 
 ### Official Documentation
+
 - **[FastMCP Framework](https://github.com/jlowin/fastmcp)** - Python Model Context Protocol framework
 - **[Qdrant Documentation](https://qdrant.tech/documentation/)** - Vector similarity search engine
 - **[Neo4j Documentation](https://neo4j.com/docs/)** - Graph database platform
 - **[Crawl4AI Documentation](https://github.com/unclecode/crawl4ai)** - Advanced web crawling framework
 
 ### Community & Support
+
 - **[GitHub Issues](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp/issues)** - Bug reports and feature requests
 - **[GitHub Discussions](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp/discussions)** - Community support and ideas
 - **[Discord Community](https://discord.gg/mcp-community)** - Real-time support and collaboration
@@ -247,6 +266,7 @@ docker-compose up -d
 ## 📄 Documentation Standards
 
 This documentation follows these principles:
+
 - **Task-Oriented**: Organized by what users want to accomplish
 - **Progressive Disclosure**: Basic → Intermediate → Advanced information flow
 - **Multi-Audience**: Clear paths for different user types
@@ -266,6 +286,7 @@ This documentation follows these principles:
 ## 📅 Documentation Roadmap
 
 ### Current Focus (Q3 2025)
+
 - ✅ Complete API reference documentation
 - ✅ Production deployment guides
 - ✅ Architecture decision records
@@ -273,6 +294,7 @@ This documentation follows these principles:
 - 🔄 Advanced integration patterns
 
 ### Upcoming (Q4 2025)
+
 - 📅 Video tutorials and walkthroughs
 - 📅 Multi-language SDK documentation
 - 📅 Enterprise integration guides
@@ -281,30 +303,35 @@ This documentation follows these principles:
 ## 🌐 Complete Documentation Navigation
 
 ### 📚 Essential Documentation
+
 - **[📍 Site Map](SITEMAP.md)** - Complete navigation guide
 - **[📋 Complete Index](INDEX.md)** - Detailed document catalog
 - **[🏠 Project Home](../README.md)** - Main project overview
 - **[🎯 Getting Started Hub](getting-started/README.md)** - Begin your journey
 
 ### 🔧 Technical References
+
 - **[📋 API Reference](API_REFERENCE.md)** - Complete REST API
 - **[🏗️ Architecture](ARCHITECTURE.md)** - System design
 - **[📚 Technical Docs](TECHNICAL_DOCUMENTATION.md)** - Implementation details
 - **[📜 Architecture Decisions](adrs/README.md)** - Design rationale
 
 ### 🚀 Operations & Deployment
+
 - **[🚢 Deployment Operations](DEPLOYMENT_OPERATIONS.md)** - Production deployment
 - **[☸️ Kubernetes Guide](deployment/kubernetes.md)** - Container orchestration
 - **[🐳 Docker Guide](deployment/docker.md)** - Container deployment
 - **[📊 Monitoring Setup](guides/monitoring-observability.md)** - Production monitoring
 
 ### 📝 Examples & Learning
+
 - **[📚 Examples Hub](examples/README.md)** - Code examples & tutorials
 - **[🔰 Basic Usage](examples/basic-usage/README.md)** - Simple examples
 - **[🚀 Advanced Workflows](examples/advanced-workflows/README.md)** - Complex patterns
 - **[📱 Client SDKs](examples/client-implementations/README.md)** - Multiple languages
 
 ### 🛠️ Development & Contributing
+
 - **[🔧 Developer Guide](DEVELOPER_GUIDE.md)** - Development workflow
 - **[🏠 Local Setup](development/local-setup.md)** - Dev environment
 - **[🎨 Contributing](development/contributing.md)** - How to contribute
@@ -315,6 +342,7 @@ This documentation follows these principles:
 ## 🆘 Support & Community
 
 ### 📞 Need Help?
+
 | Type | Resource | Response Time |
 |------|----------|---------------|
 | **Quick Questions** | [Troubleshooting Guide](guides/troubleshooting.md) | Immediate |
@@ -324,6 +352,7 @@ This documentation follows these principles:
 | **Security Issues** | `security@yourproject.com` | 24 hours |
 
 ### 🤝 Community Links
+
 - **GitHub Repository**: [qdrant-neo4j-crawl4ai-mcp](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp)
 - **Documentation Site**: [GitHub Pages](https://bjornmelin.github.io/qdrant-neo4j-crawl4ai-mcp)
 - **Discord Community**: [MCP Community](https://discord.gg/mcp-community)

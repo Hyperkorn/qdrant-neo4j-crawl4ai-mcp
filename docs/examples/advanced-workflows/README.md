@@ -5,7 +5,9 @@ This directory contains sophisticated examples that demonstrate complex multi-se
 ## 🚀 Available Workflows
 
 ### 🔬 [Multi-Agent Research](./multi-agent-research/)
+
 Coordinate multiple AI agents for comprehensive research tasks:
+
 - **Research Coordinator** - Orchestrates multiple research agents
 - **Web Research Agent** - Discovers and analyzes web content
 - **Document Analysis Agent** - Processes academic papers and reports
@@ -13,14 +15,18 @@ Coordinate multiple AI agents for comprehensive research tasks:
 - **Fact Verification Agent** - Cross-references information across sources
 
 ### 🧠 [Graph-Enhanced RAG](./graph-rag.py)
+
 Advanced RAG system that combines vector similarity with graph relationships:
+
 - **Hybrid Search** - Vector + Graph query fusion
 - **Relationship-Aware Retrieval** - Leverage entity relationships
 - **Multi-Hop Reasoning** - Follow relationship chains for deeper insights
 - **Context Enrichment** - Enhance answers with related knowledge
 
 ### 🌐 [Real-Time Content Pipeline](./content-pipeline/)
+
 Automated content discovery, processing, and knowledge building:
+
 - **Web Monitoring** - Track changes across multiple sources
 - **Content Extraction** - Intelligent content parsing and cleanup
 - **Knowledge Integration** - Merge new information into existing knowledge base
@@ -28,14 +34,18 @@ Automated content discovery, processing, and knowledge building:
 - **Quality Assessment** - Evaluate content reliability and relevance
 
 ### 🔍 [Hybrid Search System](./hybrid-search.py)
+
 Sophisticated search combining multiple modalities:
+
 - **Multi-Modal Retrieval** - Text, graph, and web sources
 - **Result Fusion** - Intelligent ranking across different result types
 - **Query Understanding** - Intent classification and query expansion
 - **Relevance Tuning** - Adaptive relevance scoring
 
 ### ⚡ [Real-Time Knowledge Graphs](./real-time-knowledge/)
+
 Dynamic knowledge graph construction from live data:
+
 - **Stream Processing** - Real-time data ingestion and processing
 - **Entity Resolution** - Merge entities across different sources
 - **Relationship Inference** - Discover implicit relationships
@@ -43,7 +53,9 @@ Dynamic knowledge graph construction from live data:
 - **Conflict Resolution** - Handle contradictory information
 
 ### 🔧 [Custom Tool Development](./custom-tools/)
+
 Examples of building custom MCP tools:
+
 - **Domain-Specific Tools** - Specialized tools for specific industries
 - **Integration Adapters** - Connect external services to MCP
 - **Workflow Orchestrators** - Combine multiple tools into workflows
@@ -52,6 +64,7 @@ Examples of building custom MCP tools:
 ## 🎯 Workflow Patterns
 
 ### 1. Pipeline Pattern
+
 Sequential processing with data flow between stages:
 
 ```mermaid
@@ -67,6 +80,7 @@ graph LR
 ```
 
 ### 2. Agent Coordination Pattern
+
 Multiple agents working collaboratively:
 
 ```mermaid
@@ -85,6 +99,7 @@ graph TB
 ```
 
 ### 3. Event-Driven Pattern
+
 Reactive processing based on events and triggers:
 
 ```mermaid
@@ -103,6 +118,7 @@ graph TB
 ```
 
 ### 4. Feedback Loop Pattern
+
 Continuous learning and improvement:
 
 ```mermaid
@@ -620,12 +636,14 @@ class TestCacheManager:
 ## 📚 Learning Resources
 
 ### Documentation
+
 - **[Workflow Design Patterns](./patterns.md)** - Common workflow architectures
 - **[Performance Tuning Guide](./performance.md)** - Optimization strategies
 - **[Security Best Practices](./security.md)** - Secure workflow implementation
 - **[Troubleshooting Guide](./troubleshooting.md)** - Common issues and solutions
 
 ### Sample Projects
+
 - **[Research Automation Pipeline](./research-pipeline/)** - Complete research workflow
 - **[Content Curation System](./content-curation/)** - Automated content discovery
 - **[Multi-Source Analytics](./analytics-workflow/)** - Complex data analysis workflows
@@ -641,6 +659,7 @@ We welcome contributions to expand and improve these advanced workflows:
 5. **Real-World Examples** - Share production use cases
 
 ### Development Guidelines
+
 - **Async First** - Use async/await for all I/O operations
 - **Error Handling** - Implement comprehensive error handling
 - **Monitoring** - Include metrics and observability

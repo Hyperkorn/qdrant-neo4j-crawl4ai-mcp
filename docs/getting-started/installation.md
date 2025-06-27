@@ -14,6 +14,7 @@ Comprehensive installation instructions for all deployment scenarios of the Qdra
 ## 📋 System Requirements
 
 ### Minimum Requirements
+
 - **OS**: Linux, macOS, or Windows with WSL2
 - **CPU**: 2 cores (4+ recommended)
 - **RAM**: 4GB (8GB+ recommended)
@@ -21,12 +22,14 @@ Comprehensive installation instructions for all deployment scenarios of the Qdra
 - **Network**: Internet connection for downloading dependencies
 
 ### Software Prerequisites
+
 - **Docker**: 20.10+ and Docker Compose 2.0+
 - **Python**: 3.11+ (for local development)
 - **Git**: Latest version
 - **uv**: Package manager (recommended) or pip
 
 ### Optional Requirements
+
 - **Kubernetes**: 1.25+ (for K8s deployment)
 - **kubectl**: Latest version
 - **Helm**: 3.0+ (for easier K8s deployment)
@@ -55,6 +58,7 @@ nano .env
 ```
 
 **Minimal .env configuration:**
+
 ```env
 # Environment
 ENVIRONMENT=development
@@ -108,6 +112,7 @@ redis-cli -h localhost ping  # Redis
 ```
 
 Expected health response:
+
 ```json
 {
   "status": "healthy",
@@ -126,9 +131,9 @@ Expected health response:
 
 | Service | URL | Credentials |
 |---------|-----|-------------|
-| API Docs | http://localhost:8000/docs | None |
-| Neo4j Browser | http://localhost:7474 | neo4j / secure_password_123 |
-| Grafana | http://localhost:3000 | admin / development |
+| API Docs | <http://localhost:8000/docs> | None |
+| Neo4j Browser | <http://localhost:7474> | neo4j / secure_password_123 |
+| Grafana | <http://localhost:3000> | admin / development |
 
 ## 💻 Local Development Installation
 
@@ -137,6 +142,7 @@ For contributing or debugging the codebase.
 ### Step 1: System Dependencies
 
 **Ubuntu/Debian:**
+
 ```bash
 # Update system packages
 sudo apt update && sudo apt upgrade -y
@@ -151,6 +157,7 @@ sudo usermod -aG docker $USER
 ```
 
 **macOS:**
+
 ```bash
 # Install Homebrew if not already installed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -163,6 +170,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 **Windows (WSL2):**
+
 ```bash
 # Inside WSL2 Ubuntu
 sudo apt update && sudo apt upgrade -y
@@ -586,6 +594,7 @@ chmod +x verify-installation.sh
 ### Common Issues
 
 #### Docker Permission Issues
+
 ```bash
 # Add user to docker group
 sudo usermod -aG docker $USER
@@ -596,6 +605,7 @@ sudo docker-compose up -d
 ```
 
 #### Port Conflicts
+
 ```bash
 # Check what's using ports
 sudo netstat -tulpn | grep :8000
@@ -607,6 +617,7 @@ sudo netstat -tulpn | grep :7687
 ```
 
 #### Memory Issues
+
 ```bash
 # Check Docker memory usage
 docker stats
@@ -617,6 +628,7 @@ docker-compose up -d qdrant neo4j redis qdrant-neo4j-crawl4ai-mcp
 ```
 
 #### Database Connection Issues
+
 ```bash
 # Check container logs
 docker-compose logs qdrant
@@ -649,6 +661,7 @@ After successful installation:
 ---
 
 **🔗 Quick Links:**
+
 - [Configuration Guide](./configuration.md) - Customize your installation
 - [First Queries](./first-queries.md) - Start using the system
 - [Troubleshooting](./troubleshooting.md) - Solve common problems

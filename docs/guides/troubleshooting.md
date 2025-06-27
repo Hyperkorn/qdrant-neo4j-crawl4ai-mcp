@@ -71,6 +71,7 @@ curl -H "Authorization: Bearer YOUR_TOKEN" \
 ### Issue: Server Won't Start
 
 **Symptoms:**
+
 - Container exits immediately
 - "Connection refused" errors
 - Port binding failures
@@ -114,6 +115,7 @@ NEO4J_URI=bolt://neo4j:7687
 ### Issue: Database Connection Failures
 
 **Symptoms:**
+
 - 500 errors on API calls
 - "Connection timeout" in logs
 - Health check failures
@@ -165,6 +167,7 @@ async def check_database_health():
 ### Issue: Authentication Problems
 
 **Symptoms:**
+
 - 401 Unauthorized errors
 - "Invalid token" messages
 - JWT decode failures
@@ -229,6 +232,7 @@ def create_access_token(data: dict, expires_delta: timedelta = None):
 ### Issue: Slow Query Response Times
 
 **Symptoms:**
+
 - API responses > 2 seconds
 - High CPU usage
 - Memory consumption growing
@@ -315,6 +319,7 @@ async def optimized_vector_search(query: str, limit: int = 10):
 ### Issue: Memory Leaks
 
 **Symptoms:**
+
 - Gradually increasing memory usage
 - Out of Memory (OOM) kills
 - Container restarts
@@ -399,6 +404,7 @@ async def periodic_cleanup():
 ### Issue: Qdrant Connection Issues
 
 **Symptoms:**
+
 - Vector search failures
 - Collection creation errors
 - Timeout exceptions
@@ -492,6 +498,7 @@ async def ensure_collection_exists(collection_name: str, vector_size: int = 384)
 ### Issue: Neo4j Connection Issues
 
 **Symptoms:**
+
 - Graph query failures
 - Transaction timeouts
 - Authentication errors
@@ -585,6 +592,7 @@ async def execute_query_with_retry(query: str, parameters: dict = None):
 ### Issue: JWT Token Problems
 
 **Symptoms:**
+
 - Constant re-authentication required
 - "Token expired" errors
 - Invalid signature errors
@@ -684,6 +692,7 @@ async def token_refresh_middleware(request: Request, call_next):
 ### Issue: Missing or Inaccurate Metrics
 
 **Symptoms:**
+
 - Prometheus metrics not updating
 - Grafana dashboards empty
 - Alert rules not firing
@@ -798,6 +807,7 @@ async def update_system_metrics():
 ### Issue: Log Analysis Problems
 
 **Symptoms:**
+
 - Logs not structured
 - Difficult to correlate events
 - Missing context information

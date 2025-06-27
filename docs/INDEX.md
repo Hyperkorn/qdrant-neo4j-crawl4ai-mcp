@@ -29,6 +29,7 @@
 ### 📖 User & Application Guides
 
 #### Core Functionality Guides
+
 | Guide | Description | Use Cases | Complexity |
 |-------|-------------|-----------|------------|
 | **[Semantic Search](guides/semantic-search.md)** | Vector database operations | Research, content discovery | Beginner |
@@ -37,6 +38,7 @@
 | **[Agentic Workflows](guides/agentic-workflows.md)** | Multi-modal autonomous queries | Complex research tasks | Advanced |
 
 #### Production Operations Guides
+
 | Guide | Description | Target Audience | Complexity |
 |-------|-------------|-----------------|------------|
 | **[Best Practices](guides/best-practices.md)** | Production deployment patterns | DevOps, Architects | Intermediate |
@@ -48,6 +50,7 @@
 ### 🔧 Technical Reference Documentation
 
 #### API & Integration Reference
+
 | Document | Description | Contents | Usage |
 |----------|-------------|----------|-------|
 | **[API Reference](API_REFERENCE.md)** | Complete REST API documentation | Endpoints, schemas, examples | Integration development |
@@ -56,6 +59,7 @@
 | **[Schema Reference](api/schemas/README.md)** | Data models and validation | Pydantic models, validation rules | API development |
 
 #### Individual Tool References
+
 | Tool Category | Document | Description | Technical Details |
 |---------------|----------|-------------|-------------------|
 | **Vector Operations** | **[Vector Tools](api/tools/vector-tools.md)** | Qdrant vector search tools | Embeddings, similarity search |
@@ -65,6 +69,7 @@
 ### 🏗️ Architecture & Design Documentation
 
 #### System Architecture
+
 | Document | Description | Contents | Audience |
 |----------|-------------|----------|----------|
 | **[System Architecture](ARCHITECTURE.md)** | Complete system design overview | Diagrams, patterns, decisions | Architects, Developers |
@@ -74,6 +79,7 @@
 | **[System Overview](architecture/system-overview.md)** | High-level system view | Overall system design | All technical users |
 
 #### Architecture Decision Records (ADRs)
+
 | ADR | Title | Description | Impact |
 |-----|-------|-------------|--------|
 | **[ADR-001](adrs/ADR-001-agent-framework-selection.md)** | Agent Framework Selection | Choice of Pydantic-AI for agentic behavior | Core framework |
@@ -88,6 +94,7 @@
 ### 🚢 Deployment & Operations Documentation
 
 #### Core Deployment Guides
+
 | Document | Description | Target Environment | Complexity |
 |----------|-------------|-------------------|------------|
 | **[Deployment Operations](DEPLOYMENT_OPERATIONS.md)** | Production deployment guide | All environments | Intermediate |
@@ -96,6 +103,7 @@
 | **[Cloud Platforms](deployment/cloud-platforms.md)** | Managed platform deployment | Railway, Fly.io, Render | Intermediate |
 
 #### Operations & Maintenance
+
 | Document | Description | Purpose | Audience |
 |----------|-------------|---------|----------|
 | **[Monitoring Setup](deployment/monitoring.md)** | Prometheus, Grafana, logging | Production monitoring | Operations |
@@ -105,6 +113,7 @@
 ### 💻 Development & Contributing Documentation
 
 #### Development Workflow
+
 | Document | Description | Target Audience | Purpose |
 |----------|-------------|-----------------|---------|
 | **[Developer Guide](DEVELOPER_GUIDE.md)** | Complete development workflow | Contributors, maintainers | Development setup |
@@ -117,6 +126,7 @@
 ### 📝 Examples & Tutorials
 
 #### Example Categories
+
 | Category | Document | Description | Skill Level |
 |----------|----------|-------------|-------------|
 | **Examples Hub** | **[Examples Overview](examples/README.md)** | Complete examples index | All levels |
@@ -126,6 +136,7 @@
 | **Use Cases** | **[Production Use Cases](examples/use-cases/README.md)** | Real-world implementations | Expert |
 
 #### Specific Examples
+
 | Example | File | Description | Technology |
 |---------|------|-------------|------------|
 | **Vector Operations** | **[vector-operations.py](examples/basic-usage/vector-operations.py)** | Basic vector search examples | Python |
@@ -138,6 +149,7 @@
 ### 📊 Research & Background Documentation
 
 #### Strategic Documentation
+
 | Document | Description | Purpose | Audience |
 |----------|-------------|---------|----------|
 | **[Agentic RAG Research](research/AGENTIC_RAG_RECOMMENDATION.md)** | Executive summary and justification | Strategic context | Executives, Architects |
@@ -146,6 +158,7 @@
 | **[Portfolio Summary](../PORTFOLIO_SUMMARY.md)** | Project showcase summary | Professional portfolio | Recruiters, Stakeholders |
 
 #### Research Process Documentation
+
 | Document | Purpose | Contents | Audience |
 |----------|---------|----------|----------|
 | **[Agent Research Logs](../logs/)** | Development process documentation | Individual agent research | Development team |
@@ -154,6 +167,7 @@
 ### 🛠️ Infrastructure & Configuration
 
 #### Configuration Files
+
 | File | Description | Purpose | Environment |
 |------|-------------|---------|-------------|
 | **[GitHub Pages Config](_config.yml)** | GitHub Pages Jekyll configuration | Documentation hosting | Production docs |
@@ -162,6 +176,7 @@
 | **[Kubernetes Manifests](../k8s/manifests/)** | K8s deployment configurations | Container orchestration | Production |
 
 #### Monitoring & Observability
+
 | Directory | Contents | Purpose | Usage |
 |-----------|----------|---------|-------|
 | **[Monitoring Config](../monitoring/)** | Prometheus, Grafana, Loki configs | Production monitoring | Operations |
@@ -173,28 +188,34 @@
 ### By User Type
 
 #### 🤖 AI Assistant Developers
+
 **Goal**: Integrate intelligent RAG capabilities
 **Path**: [Quick Start](getting-started/quick-start.md) → [First Queries](getting-started/first-queries.md) → [API Reference](API_REFERENCE.md) → [Examples](examples/README.md)
 
 #### 📊 Data Scientists/Researchers  
+
 **Goal**: Analyze complex data relationships
 **Path**: [Installation](getting-started/installation.md) → [Configuration](getting-started/configuration.md) → [Advanced Examples](examples/advanced-workflows/README.md) → [Research Docs](research/AGENTIC_RAG_RECOMMENDATION.md)
 
 #### 🏗️ DevOps/Infrastructure Engineers
+
 **Goal**: Deploy and manage in production  
 **Path**: [Installation](getting-started/installation.md) → [Kubernetes Deployment](deployment/kubernetes.md) → [Monitoring Setup](guides/monitoring-observability.md) → [Best Practices](guides/best-practices.md)
 
 #### 💻 Application Developers
+
 **Goal**: Build applications with intelligent data processing
 **Path**: [Quick Start](getting-started/quick-start.md) → [API Integration](getting-started/first-queries.md) → [Client SDKs](examples/client-implementations/README.md) → [Configuration](getting-started/configuration.md)
 
 #### 🎨 System Architects
+
 **Goal**: Understand design and integrate with existing systems
 **Path**: [Architecture Overview](ARCHITECTURE.md) → [ADRs](adrs/README.md) → [Technical Documentation](TECHNICAL_DOCUMENTATION.md) → [Best Practices](guides/best-practices.md)
 
 ### By Task Type
 
 #### 🚀 New Deployment
+
 1. [Getting Started Overview](getting-started/README.md)
 2. [Installation Guide](getting-started/installation.md)  
 3. [Configuration Guide](getting-started/configuration.md)
@@ -203,18 +224,21 @@
 6. [Monitoring Setup](guides/monitoring-observability.md)
 
 #### 🔧 Optimization & Maintenance
+
 1. [Performance Optimization](guides/performance-optimization.md)
 2. [Monitoring & Observability](guides/monitoring-observability.md)
 3. [Troubleshooting](guides/troubleshooting.md)
 4. [Best Practices](guides/best-practices.md)
 
 #### 🛡️ Security Review
+
 1. [Security Hardening](guides/security-hardening.md)
 2. [ADR-007: Security Architecture](adrs/ADR-007-security-authentication.md)
 3. [Best Practices: Security](guides/best-practices.md#security--authentication)
 4. [Deployment Security](deployment/security.md)
 
 #### 🎨 Custom Development
+
 1. [Developer Guide](DEVELOPER_GUIDE.md)
 2. [Architecture Overview](ARCHITECTURE.md)
 3. [Examples](examples/README.md)
@@ -223,6 +247,7 @@
 ## 📊 Documentation Metrics
 
 ### Coverage Statistics
+
 - **Total Documents**: 50+ comprehensive guides and references
 - **Code Examples**: 25+ practical implementations
 - **Architecture Diagrams**: 15+ Mermaid diagrams
@@ -230,6 +255,7 @@
 - **API Endpoints**: 100% documented with examples
 
 ### Quality Indicators
+
 - ✅ **Production-Ready**: All guides tested in production environments
 - ✅ **Multi-Audience**: Clear paths for different user types
 - ✅ **Cross-Linked**: Comprehensive internal linking
@@ -237,6 +263,7 @@
 - ✅ **Maintained**: Regular updates with code changes
 
 ### GitHub Pages Features
+
 - **Navigation**: Automatic menu generation from docs structure
 - **Search**: Full-text search across all documentation
 - **Mobile-Friendly**: Responsive design for all devices
@@ -246,6 +273,7 @@
 ## 🆘 Getting Help
 
 ### Quick References
+
 | Need | Resource | Response Time |
 |------|----------|---------------|
 | **Quick Questions** | [Troubleshooting Guides](guides/troubleshooting.md) | Immediate |
@@ -254,6 +282,7 @@
 | **Performance Issues** | [Performance Guide](guides/performance-optimization.md) | Self-service |
 
 ### Community Support
+
 | Question Type | Resource | Response Time |
 |---------------|----------|---------------|
 | **Usage Help** | [GitHub Discussions](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp/discussions) | 24-48 hours |
@@ -262,6 +291,7 @@
 | **Security Issues** | `security@yourproject.com` | 24 hours |
 
 ### Professional Support
+
 - **Enterprise Support**: Available for production deployments
 - **Consulting Services**: Architecture and performance optimization
 - **Training**: Team training for complex deployments

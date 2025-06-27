@@ -54,6 +54,7 @@ graph TB
 ```
 
 **Key Characteristics:**
+
 - **Autonomous Decision Making**: Query routing without explicit user configuration
 - **Strategy Adaptation**: Dynamic selection of optimal search strategies
 - **Confidence-Driven Results**: Self-validating responses with uncertainty quantification
@@ -194,6 +195,7 @@ graph TB
 The query router analyzes incoming requests and determines optimal processing strategies:
 
 **Capabilities:**
+
 - Natural language query parsing and intent recognition
 - Complexity assessment and resource requirement estimation
 - Dynamic strategy selection based on query characteristics
@@ -350,6 +352,7 @@ classDiagram
 ```
 
 **Performance Characteristics:**
+
 - **Throughput**: 500+ searches/second per instance
 - **Latency**: < 50ms for semantic search
 - **Capacity**: 10M+ vectors per collection
@@ -395,6 +398,7 @@ classDiagram
 ```
 
 **Performance Characteristics:**
+
 - **Throughput**: 200+ graph queries/second
 - **Latency**: < 100ms for relationship queries
 - **Capacity**: 100M+ nodes, 1B+ relationships
@@ -442,6 +446,7 @@ classDiagram
 ```
 
 **Performance Characteristics:**
+
 - **Throughput**: 50+ concurrent extractions
 - **Latency**: < 2s for web page extraction
 - **Reliability**: 99%+ successful extractions

@@ -5,18 +5,21 @@ This directory contains complete client application examples that demonstrate ho
 ## 📁 Available Implementations
 
 ### 🐍 Python Applications
+
 - **[python-client/](./python-client/)** - FastAPI web service with async MCP integration
 - **[jupyter-notebooks/](./jupyter-notebooks/)** - Data science workflows and research notebooks
 - **[cli-tools/](./cli-tools/)** - Command-line interfaces for automation
 - **[django-integration/](./django-integration/)** - Django web application with MCP backend
 
 ### 🟨 TypeScript/JavaScript Applications  
+
 - **[nextjs-app/](./nextjs-app/)** - Next.js 14 web application with TypeScript
 - **[express-api/](./express-api/)** - Express.js REST API server
 - **[react-components/](./react-components/)** - Reusable React components for MCP
 - **[node-cli/](./node-cli/)** - Node.js command-line tools
 
 ### 🔧 Integration Examples
+
 - **[langchain-integration/](./langchain-integration/)** - LangChain pipeline integration
 - **[autogen-agents/](./autogen-agents/)** - Multi-agent frameworks using AutoGen
 - **[streamlit-app/](./streamlit-app/)** - Streamlit dashboard application
@@ -25,28 +28,36 @@ This directory contains complete client application examples that demonstrate ho
 ## 🎯 Implementation Types
 
 ### 📊 Web Applications
+
 Complete web applications with user interfaces:
+
 - **Document Management Systems** - Upload, process, and search documents
 - **Research Dashboards** - Multi-source research and analysis tools
 - **Knowledge Bases** - Organizational knowledge management
 - **Q&A Platforms** - Customer support and FAQ systems
 
 ### 🔌 API Services
+
 RESTful and GraphQL API services:
+
 - **MCP Proxy Services** - HTTP APIs that proxy MCP calls
 - **Microservice Backends** - Containerized services for specific domains
 - **Integration APIs** - Services that connect MCP to existing systems
 - **Webhook Handlers** - Event-driven processing pipelines
 
 ### 🖥️ Desktop & CLI Applications
+
 Native applications and command-line tools:
+
 - **Research Assistants** - AI-powered research automation
 - **Data Processing Pipelines** - Batch processing of documents and web content
 - **System Monitoring** - Health checks and performance monitoring
 - **Content Curation** - Automated content discovery and organization
 
 ### 📱 Mobile Applications
+
 Examples of mobile app integration:
+
 - **React Native Apps** - Cross-platform mobile applications
 - **Flutter Integration** - Dart-based mobile applications
 - **Progressive Web Apps** - Mobile-first web applications
@@ -54,6 +65,7 @@ Examples of mobile app integration:
 ## 🏗️ Architecture Patterns
 
 ### 1. Direct MCP Integration
+
 Simple applications that connect directly to the MCP server:
 
 ```mermaid
@@ -65,6 +77,7 @@ graph LR
 ```
 
 ### 2. API Gateway Pattern
+
 Applications that use an API gateway or proxy:
 
 ```mermaid
@@ -77,6 +90,7 @@ graph LR
 ```
 
 ### 3. Microservices Architecture
+
 Distributed applications with multiple services:
 
 ```mermaid
@@ -93,6 +107,7 @@ graph TB
 ```
 
 ### 4. Event-Driven Architecture
+
 Applications using message queues and events:
 
 ```mermaid
@@ -159,6 +174,7 @@ async def get_auth_token():
 When building your own client application, consider these features:
 
 ### ✅ Core Features
+
 - [ ] **MCP Connection** - Robust connection handling with retries
 - [ ] **Authentication** - JWT token management and refresh
 - [ ] **Error Handling** - Comprehensive error handling and user feedback
@@ -166,24 +182,28 @@ When building your own client application, consider these features:
 - [ ] **Logging** - Structured logging for debugging and monitoring
 
 ### ✅ Vector Operations
+
 - [ ] **Document Storage** - File upload and text processing
 - [ ] **Semantic Search** - Query interface with relevance scoring
 - [ ] **Collection Management** - Create and manage vector collections
 - [ ] **Batch Operations** - Process multiple documents efficiently
 
 ### ✅ Graph Operations
+
 - [ ] **Knowledge Extraction** - Extract entities and relationships
 - [ ] **Graph Querying** - Search and traverse the knowledge graph
 - [ ] **Visualization** - Display graph structures and relationships
 - [ ] **Graph Analytics** - Analyze graph patterns and statistics
 
 ### ✅ Web Intelligence
+
 - [ ] **URL Processing** - Crawl and extract web content
 - [ ] **Content Analysis** - Analyze and categorize web content
 - [ ] **Monitoring** - Track changes in web sources
 - [ ] **Screenshot Capture** - Visual content analysis
 
 ### ✅ User Experience
+
 - [ ] **Responsive UI** - Mobile-friendly interface design
 - [ ] **Real-time Updates** - Live feedback during processing
 - [ ] **Progress Indicators** - Show processing status
@@ -191,6 +211,7 @@ When building your own client application, consider these features:
 - [ ] **Export/Import** - Data portability features
 
 ### ✅ Production Features
+
 - [ ] **Performance Monitoring** - Track application metrics
 - [ ] **Caching** - Cache frequently accessed data
 - [ ] **Rate Limiting** - Prevent API abuse
@@ -200,6 +221,7 @@ When building your own client application, consider these features:
 ## 🔧 Development Tools
 
 ### Code Generators
+
 Use these tools to bootstrap new implementations:
 
 ```bash
@@ -217,6 +239,7 @@ npx create-react-library mcp-components
 ```
 
 ### Testing Frameworks
+
 Recommended testing approaches for each platform:
 
 - **Python**: pytest, pytest-asyncio, httpx for async testing
@@ -225,6 +248,7 @@ Recommended testing approaches for each platform:
 - **React**: React Testing Library, Jest, Storybook for components
 
 ### Deployment Options
+
 Production deployment examples:
 
 - **Docker Containers** - Containerized applications with Docker Compose
@@ -235,6 +259,7 @@ Production deployment examples:
 ## 📊 Performance Benchmarks
 
 ### Request Latency (P95)
+
 | Implementation | Vector Search | Graph Query | Web Crawl |
 |---------------|---------------|-------------|-----------|
 | Python FastAPI | 45ms | 120ms | 2.1s |
@@ -242,6 +267,7 @@ Production deployment examples:
 | Express.js | 48ms | 125ms | 2.2s |
 
 ### Throughput (requests/second)
+
 | Implementation | Concurrent Users | RPS |
 |---------------|------------------|-----|
 | Python FastAPI | 100 | 850 |
@@ -251,6 +277,7 @@ Production deployment examples:
 ## 🎯 Best Practices
 
 ### Connection Management
+
 ```python
 # Use connection pooling and proper cleanup
 class MCPClientPool:
@@ -264,6 +291,7 @@ class MCPClientPool:
 ```
 
 ### Error Handling
+
 ```typescript
 // Implement circuit breaker pattern
 class CircuitBreaker {
@@ -288,6 +316,7 @@ class CircuitBreaker {
 ```
 
 ### Caching Strategy
+
 ```python
 # Implement multi-level caching
 from functools import lru_cache
@@ -311,17 +340,20 @@ class CacheManager:
 
 ### Common Issues
 
-**Connection Timeouts**
+#### **Connection Timeouts**
+
 - Increase timeout values for long-running operations
 - Implement retry logic with exponential backoff
 - Use connection pooling to avoid connection limits
 
-**Authentication Errors**
+#### **Authentication Errors**
+
 - Verify JWT token format and expiration
 - Check token scopes match required permissions
 - Implement token refresh mechanisms
 
-**Performance Issues**
+#### **Performance Issues**
+
 - Profile client-side bottlenecks
 - Optimize query patterns and batch operations
 - Implement caching for frequently accessed data
