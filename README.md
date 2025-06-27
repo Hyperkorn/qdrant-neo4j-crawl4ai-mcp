@@ -1,6 +1,6 @@
-# Unified MCP Intelligence Server
+# Qdrant Neo4j Crawl4AI MCP Server
 
-A production-ready Model Context Protocol (MCP) server that abstracts Qdrant vector search, Neo4j knowledge graphs, and Crawl4AI web intelligence into a cohesive platform for AI assistant interactions.
+A production-ready Model Context Protocol (MCP) server combining Qdrant vector search, Neo4j knowledge graphs, and Crawl4AI web intelligence into a cohesive platform for AI assistant interactions.
 
 ## ✨ Features
 
@@ -17,7 +17,7 @@ A production-ready Model Context Protocol (MCP) server that abstracts Qdrant vec
 graph TB
     Client[AI Assistant Client] --> Gateway[FastMCP Gateway]
     
-    subgraph "Unified MCP Server"
+    subgraph "Qdrant Neo4j Crawl4AI MCP Server"
         Gateway --> Router[Request Router]
         Router --> Vector[Vector Service]
         Router --> Graph[Graph Service] 
@@ -56,8 +56,8 @@ graph TB
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/mcp-unified-intelligence.git
-cd mcp-unified-intelligence
+git clone https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp.git
+cd qdrant-neo4j-crawl4ai-mcp
 
 # Install dependencies
 uv sync
@@ -70,7 +70,7 @@ cp .env.example .env
 docker-compose up -d
 
 # Or run locally
-uv run python -m unified_mcp_server
+uv run python -m qdrant_neo4j_crawl4ai_mcp
 ```
 
 ### Configuration
@@ -103,7 +103,7 @@ CORS_ORIGINS=https://your-domain.com
 uv run pytest
 
 # Run with coverage
-uv run pytest --cov=unified_mcp_server --cov-report=html
+uv run pytest --cov=qdrant_neo4j_crawl4ai_mcp --cov-report=html
 
 # Run specific test suite
 uv run pytest tests/integration/
@@ -133,10 +133,10 @@ Once running, access the interactive API documentation at:
 
 ```python
 import asyncio
-from unified_mcp_client import UnifiedMCPClient
+from qdrant_neo4j_crawl4ai_mcp.client import QdrantNeo4jCrawl4AIMCPClient
 
 async def main():
-    client = UnifiedMCPClient("http://localhost:8000")
+    client = QdrantNeo4jCrawl4AIMCPClient("http://localhost:8000")
     
     # Vector search
     results = await client.vector_search("artificial intelligence")
@@ -156,8 +156,8 @@ asyncio.run(main())
 
 ```bash
 # Production build
-docker build -t mcp-unified-server .
-docker run -p 8000:8000 mcp-unified-server
+docker build -t qdrant-neo4j-crawl4ai-mcp .
+docker run -p 8000:8000 qdrant-neo4j-crawl4ai-mcp
 ```
 
 ### Cloud Deployment
@@ -227,4 +227,4 @@ This project demonstrates:
 
 ---
 
-Built with ❤️ using FastMCP 2.0, Qdrant, Neo4j, and Crawl4AI
+> Built with ☕ using FastMCP 2.0, Qdrant, Neo4j, and Web Intelligence
