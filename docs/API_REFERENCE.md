@@ -21,7 +21,7 @@ The Agentic RAG MCP Server provides a RESTful API for accessing multi-modal AI i
 
 ### Base URL
 
-```
+```text
 Production: https://your-domain.com/api/v1
 Development: http://localhost:8000/api/v1
 ```

@@ -8,15 +8,15 @@ Based on comprehensive research from 5 parallel research agents, these ADRs capt
 
 ## Decision Summary
 
-| ADR | Title | Status | Decision |
-|-----|-------|---------|----------|
-| [ADR-001](./ADR-001-agent-framework-selection.md) | Agent Framework Selection | Accepted | **Pydantic-AI** |
-| [ADR-002](./ADR-002-hybrid-search-architecture.md) | Hybrid Search Architecture | Accepted | **RRF with Context Graph Boosting** |
-| [ADR-003](./ADR-003-crawl4ai-integration-strategy.md) | Crawl4AI Integration Strategy | Accepted | **Cole Medin's MCP Server** |
-| [ADR-004](./ADR-004-multi-agent-coordination-pattern.md) | Multi-Agent Coordination Pattern | Accepted | **Central Orchestration** |
-| [ADR-005](./ADR-005-memory-state-management.md) | Memory and State Management | Accepted | **GraphRAG Hybrid Memory** |
-| [ADR-006](./ADR-006-evaluation-monitoring-framework.md) | Evaluation and Monitoring Framework | Accepted | **RAGAs + Custom Metrics** |
-| [ADR-007](./ADR-007-security-authentication.md) | Security and Authentication | Accepted | **Enhanced FastMCP Security** |
+| ADR                                                      | Title                               | Status   | Decision                            |
+| -------------------------------------------------------- | ----------------------------------- | -------- | ----------------------------------- |
+| [ADR-001](./ADR-001-agent-framework-selection.md)        | Agent Framework Selection           | Accepted | **Pydantic-AI**                     |
+| [ADR-002](./ADR-002-hybrid-search-architecture.md)       | Hybrid Search Architecture          | Accepted | **RRF with Context Graph Boosting** |
+| [ADR-003](./ADR-003-crawl4ai-integration-strategy.md)    | Crawl4AI Integration Strategy       | Accepted | **Cole Medin's MCP Server**         |
+| [ADR-004](./ADR-004-multi-agent-coordination-pattern.md) | Multi-Agent Coordination Pattern    | Accepted | **Central Orchestration**           |
+| [ADR-005](./ADR-005-memory-state-management.md)          | Memory and State Management         | Accepted | **GraphRAG Hybrid Memory**          |
+| [ADR-006](./ADR-006-evaluation-monitoring-framework.md)  | Evaluation and Monitoring Framework | Accepted | **RAGAs + Custom Metrics**          |
+| [ADR-007](./ADR-007-security-authentication.md)          | Security and Authentication         | Accepted | **Enhanced FastMCP Security**       |
 
 ## Implementation Dependencies
 
@@ -26,12 +26,12 @@ graph TD
     A --> E[ADR-005: Memory Management]
     A --> F[ADR-006: Evaluation Framework]
     A --> G[ADR-007: Security]
-    
+
     B[ADR-002: Hybrid Search] --> E
-    
+
     A --> C[ADR-003: Crawl4AI Integration]
     C --> G
-    
+
     D --> F
     C --> G
 ```
@@ -65,21 +65,21 @@ All decisions are classified as **LOW RISK** with:
 
 ### Phase 1: Foundation (Weeks 1-2)
 
-1. **ADR-001**: Install Pydantic-AI and implement basic agent structure
-2. **ADR-002**: Implement basic RRF fusion for hybrid search
-3. **ADR-003**: Deploy Cole Medin's Crawl4AI MCP server
+  1. **ADR-001**: Install Pydantic-AI and implement basic agent structure
+  2. **ADR-002**: Implement basic RRF fusion for hybrid search
+  3. **ADR-003**: Deploy Cole Medin's Crawl4AI MCP server
 
 ### Phase 2: Integration (Weeks 3-4)
 
-4. **ADR-004**: Implement central orchestration pattern
-5. **ADR-005**: Add GraphRAG hybrid memory system
-6. **ADR-006**: Deploy basic evaluation metrics
+  1. **ADR-004**: Implement central orchestration pattern
+  2. **ADR-005**: Add GraphRAG hybrid memory system
+  3. **ADR-006**: Deploy basic evaluation metrics
 
 ### Phase 3: Production (Weeks 5-6)
 
-7. **ADR-007**: Implement enhanced security features
-8. **ADR-006**: Complete comprehensive monitoring
-9. Integration testing and performance optimization
+  1. **ADR-007**: Implement enhanced security features
+  2. **ADR-006**: Complete comprehensive monitoring
+  3. Integration testing and performance optimization
 
 ## Quality Criteria
 
@@ -113,20 +113,24 @@ For future architectural decisions, use this template:
 # ADR-XXX: [Title]
 
 ## Status
+
 [Proposed/Accepted/Superseded] - Date: YYYY-MM-DD
 
 ## Context
+
 - Problem statement
 - Constraints and requirements
 - Research findings summary
 - Alternative approaches considered
 
 ## Decision
+
 - Chosen solution with technical justification
 - Key criteria that drove the decision
 - Trade-off analysis
 
 ## Consequences
+
 - Positive outcomes
 - Negative consequences/risks
 - Implementation impact
