@@ -321,6 +321,9 @@ vulnerability_reports/
 .mcp/
 mcp_data/
 
+# Serena MCP code analysis tool
+.serena/
+
 # Generated documentation
 generated_docs/
 
